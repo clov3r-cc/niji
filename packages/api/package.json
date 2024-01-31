@@ -5,13 +5,13 @@
     "deploy": "wrangler deploy --minify src/index.ts",
     "lint": "bunx @biomejs/biome check ./src",
     "lint:fix": "bun run lint --apply",
-    "prepare": "simple-git-hooks"
-  },
-  "lint-staged": {
-    "**/src/*.{ts, tsx}": "bun run lint"
+    "prepare": "bunx simple-git-hooks"
   },
   "simple-git-hooks": {
     "pre-commit": "bunx lint-staged"
+  },
+  "lint-staged": {
+    "**/src/*.{ts, tsx}": "bun run lint"
   },
   "dependencies": {
     "drizzle-orm": "^0.29.3",
