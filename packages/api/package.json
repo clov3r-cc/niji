@@ -2,7 +2,9 @@
   "name": "niji-api",
   "scripts": {
     "dev": "wrangler dev src/index.ts",
-    "deploy": "wrangler deploy --minify src/index.ts"
+    "deploy": "wrangler deploy --minify src/index.ts",
+    "lint": "bunx @biomejs/biome check ./src",
+    "lint:fix": "bun run lint --apply"
   },
   "dependencies": {
     "drizzle-orm": "^0.29.3",
