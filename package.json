@@ -1,0 +1,5 @@
+{
+  "name": "niji-app",
+  "private": true,
+  "workspaces": ["packages/*"]
+}

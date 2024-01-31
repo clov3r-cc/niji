@@ -1,0 +1,77 @@
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the
+// README at: https://github.com/devcontainers/templates/tree/main/src/alpine
+{
+	"name": "Alpine",
+	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
+	"dockerComposeFile": "compose.yaml",
+  "service": "app",
+  "workspaceFolder": "/workspace",
+
+	// Features to add to the dev container. More info: https://containers.dev/features.
+	// "features": {},
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": ".devcontainer/postAttach.sh",
+
+	// Configure tool-specific properties.
+	"customizations": {
+    "vscode": {
+      "extensions": [
+        "streetsidesoftware.code-spell-checker",
+        "tamasfe.even-better-toml",
+        "formulahendry.auto-complete-tag",
+        "biomejs.biome",
+        "Pandy.bun",
+        "oven.bun-vscode",
+        "me-dutour-mathieu.vscode-github-actions",
+        "christian-kohler.npm-intellisense",
+        "christian-kohler.path-intellisense",
+        "esbenp.prettier-vscode"
+      ],
+      "settings": {
+        "editor.guides.bracketPairs": "active",
+        "editor.suggestSelection": "first",
+        "editor.tabSize": 2,
+        "editor.detectIndentation": false,
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.accessibilitySupport": "off",
+        "editor.quickSuggestions": {
+          "strings": true
+        },
+        "emmet.triggerExpansionOnTab": true,
+        "emmet.variables": {
+          "lang": "ja"
+        },
+        "files.autoSave": "onFocusChange",
+        "files.autoGuessEncoding": true,
+        "javascript.updateImportsOnFileMove.enabled": "always",
+        "typescript.updateImportsOnFileMove.enabled": "always",
+        "[html]": {
+          "editor.tabSize": 2
+        },
+        "[javascript]": {
+          "editor.formatOnSave": true
+        },
+        "[javascriptreact]": {
+          "editor.formatOnSave": true
+        },
+        "[json]": {
+          "editor.formatOnSave": true
+        },
+        "[typescript]": {
+          "editor.formatOnSave": true
+        },
+        "[typescriptreact]": {
+          "editor.formatOnSave": true
+        }
+      }
+    }
+  },
+
+	// Uncomment to connect as root instead. More info: https://aka.ms/dev-containers-non-root.
+	"remoteUser": "vscode"
+}
