@@ -1,0 +1,7 @@
+pre-commit:
+  parallel: true
+  commands:
+    api-lint:
+      root: "packages/api"
+      glob: "**/*.{js,ts,jsx,tsx}"
+      run: bun run lint

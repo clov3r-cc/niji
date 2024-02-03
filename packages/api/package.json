@@ -4,14 +4,7 @@
     "dev": "wrangler dev src/index.ts",
     "deploy": "wrangler deploy --minify src/index.ts",
     "lint": "bunx @biomejs/biome check ./src",
-    "lint:fix": "bun run lint --apply",
-    "prepare": "bunx simple-git-hooks"
-  },
-  "simple-git-hooks": {
-    "pre-commit": "bunx lint-staged"
-  },
-  "lint-staged": {
-    "**/src/*.{ts, tsx}": "bun run lint"
+    "lint:fix": "bun run lint --apply"
   },
   "dependencies": {
     "drizzle-orm": "^0.29.3",
@@ -21,7 +14,6 @@
     "@biomejs/biome": "1.5.3",
     "@cloudflare/workers-types": "^4.20231218.0",
     "drizzle-kit": "^0.20.13",
-    "lint-staged": "^15.2.1",
     "simple-git-hooks": "^2.9.0",
     "wrangler": "^3.25.0"
   }
