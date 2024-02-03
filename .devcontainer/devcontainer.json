@@ -54,19 +54,23 @@
           "editor.tabSize": 2
         },
         "[javascript]": {
-          "editor.formatOnSave": true
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "biomejs.biome"
         },
         "[javascriptreact]": {
-          "editor.formatOnSave": true
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "biomejs.biome"
         },
         "[json]": {
           "editor.formatOnSave": true
         },
         "[typescript]": {
-          "editor.formatOnSave": true
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "biomejs.biome"
         },
         "[typescriptreact]": {
-          "editor.formatOnSave": true
+          "editor.formatOnSave": true,
+          "editor.defaultFormatter": "biomejs.biome"
         }
       }
     }
