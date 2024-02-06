@@ -5,7 +5,7 @@
     "deploy": "wrangler deploy --minify src/index.ts",
     "lint": "bunx @biomejs/biome check ./src",
     "lint:fix": "bun run lint --apply",
-    "migration": "run-s migration:com migration:gen migration:run",
+    "migration": "run-s migration:gen migration:run",
     "migration:gen": "drizzle-kit generate:sqlite --schema src/schema.ts --out migrations",
     "migration:run": "wrangler d1 migrations apply niji-db --local",
     "migration:run:prod": "wrangler d1 migrations apply niji-db"
