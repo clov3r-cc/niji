@@ -2,5 +2,5 @@ pre-commit:
   parallel: true
   commands:
     api-lint:
-      glob: "src/**/*.{js,ts,jsx,tsx}"
+      glob: "app/**/*.{js,ts,jsx,tsx}"
       run: bun run lint
