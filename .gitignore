@@ -16,11 +16,11 @@ node_modules/
 .env.production.local
 .env.local
 
-.wrangler
-.dev.vars
+# direnv
+.envrc
 
-# Change them to your taste:
-wrangler.toml
+# miniflare
+.mf
 
 # SQL migrations
 migrations/

@@ -28,7 +28,7 @@
   },
   "overrides": [
     {
-      "include": ["src/types.ts"],
+      "include": ["app/global.d.ts", "vite.config.ts"],
       "linter": {
         "rules": {
           "style": {
@@ -36,6 +36,20 @@
           },
           "correctness": {
             "noUndeclaredVariables": "off"
+          }
+        }
+      }
+    },
+    {
+      "include": [
+        "app/routes/**/index.tsx",
+        "app/routes/**/_renderer.tsx",
+        "app/server.ts"
+      ],
+      "linter": {
+        "rules": {
+          "style": {
+            "noDefaultExport": "off"
           }
         }
       }
