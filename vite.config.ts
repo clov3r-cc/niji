@@ -1,18 +1,20 @@
 import pages from '@hono/vite-cloudflare-pages';
+import { getEnv } from '@hono/vite-dev-server/cloudflare-pages';
 import honox from 'honox/vite';
 import client from 'honox/vite/client';
 import { defineConfig } from 'vite';
-import { getEnv } from '@hono/vite-dev-server/cloudflare-pages';
+import tsconfigPaths from 'vite-tsconfig-paths';
 
 export default defineConfig(({ mode }) => {
   if (mode === 'client') {
     return {
-      plugins: [client()],
+      plugins: [tsconfigPaths(), client()],
     };
   }
 
   return {
     plugins: [
+      tsconfigPaths(),
       honox({
         devServer: {
           env: getEnv({
