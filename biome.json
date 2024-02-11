@@ -17,7 +17,8 @@
   "javascript": {
     "formatter": {
       "quoteStyle": "single"
-    }
+    },
+    "globals": ["D1Database", "KVNamespace", "R2Bucket"]
   },
   "linter": {
     "enabled": true,
@@ -33,9 +34,6 @@
         "rules": {
           "style": {
             "useNamingConvention": "off"
-          },
-          "correctness": {
-            "noUndeclaredVariables": "off"
           }
         }
       }
