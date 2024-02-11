@@ -21,7 +21,7 @@ export default defineConfig(({ mode }) => {
               GOOGLE_SECRET: process.env.GOOGLE_SECRET || '',
             },
             compatibilityDate: '2023-12-31',
-            kvNamespaces: ['SESSION'],
+            kvNamespaces: ['KV'],
             kvPersist: true,
             d1Databases: ['DB'],
             d1Persist: true,
