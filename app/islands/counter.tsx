@@ -1,6 +1,6 @@
 import { useState } from 'hono/jsx';
 
-export const Counter = () => {
+export default function Counter() {
   const [count, setCount] = useState(0);
 
   return (
@@ -11,4 +11,4 @@ export const Counter = () => {
       </button>
     </>
   );
-};
+}
