@@ -1,5 +1,8 @@
+import { eq } from 'drizzle-orm';
 import type { Env, MiddlewareHandler } from 'hono';
 import { getCookie } from 'hono/cookie';
+import { usersTable } from './dbSchema';
+import { DB } from './lib';
 
 export const authorize: MiddlewareHandler<Env> = async (c, next) => {
   const sessionId = getCookie(c, '__session');
@@ -22,7 +25,10 @@ export const authorize: MiddlewareHandler<Env> = async (c, next) => {
       { title: 'Unauthorized!' },
     );
   }
-  c.set('userId', userId);
+  if (!c.get('user')) {
+    const foundUsers = await DB(c.env.DB).select().from(usersTable).where(eq(usersTable.userId, userId)).limit(1);
+    c.set('user', foundUsers[0]);
+  }
 
   await next();
 };

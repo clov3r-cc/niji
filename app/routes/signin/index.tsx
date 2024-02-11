@@ -1,7 +1,9 @@
+import { usersTable } from '@/dbSchema';
+import { DB, uuidv4 } from '@/lib';
 import { googleAuth } from '@hono/oauth-providers/google';
+import { eq } from 'drizzle-orm';
 import { setCookie } from 'hono/cookie';
 import { createRoute } from 'honox/factory';
-import { v4 as uuidv4 } from 'uuid';
 
 export default createRoute(
   (c, next) =>
@@ -12,9 +14,11 @@ export default createRoute(
     })(c, next),
   async (c) => {
     const token = c.get('token');
-    const user = c.get('user-google');
+    const googleUser = c.get('user-google');
+    const googleUserId = googleUser?.id;
+    const googleUserName = googleUser?.name;
 
-    if (!(token && user)) {
+    if (!(token && googleUser && googleUserId && googleUserName)) {
       return c.text('Failed to get the user info', 500);
     }
 
@@ -26,8 +30,22 @@ export default createRoute(
       maxAge: token.expires_in,
       path: '/',
     });
-    // biome-ignore lint/style/noNonNullAssertion: <explanation>
-    await c.env.KV.put(sessionId, user.id!, {
+
+    const db = DB(c.env.DB);
+    const foundUsers = await db
+      .select({ userId: usersTable.userId })
+      .from(usersTable)
+      .where(eq(usersTable.googleAccountId, googleUserId));
+    if (foundUsers.length === 0) {
+      c.executionCtx.waitUntil(
+        db
+          .insert(usersTable)
+          .values({ userId: uuidv4(), name: googleUserName, googleAccountId: googleUserId })
+          .then(() => undefined),
+      );
+    }
+
+    await c.env.KV.put(sessionId, foundUsers[0].userId, {
       expirationTtl: token.expires_in,
     });
 
