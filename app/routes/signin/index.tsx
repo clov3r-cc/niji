@@ -18,7 +18,7 @@ export default createRoute(
       return c.text('Failed to get the user info', 500);
     }
 
-    const sessionId = uuidv4();
+    const sessionId = `session_${uuidv4()}`;
     setCookie(c, '__session', sessionId, {
       httpOnly: true,
       secure: true,
