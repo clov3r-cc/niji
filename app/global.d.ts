@@ -1,7 +1,8 @@
 import {} from 'hono';
+import type { usersTable } from './dbSchema';
 
-type Head = {
-  title?: string;
+type AppVariables = {
+  user?: typeof usersTable.$inferSelect;
 };
 
 type AppBindings = {
@@ -15,9 +16,13 @@ type EnvVariables = {
   GOOGLE_SECRET: string;
 };
 
+type Head = {
+  title?: string;
+};
+
 declare module 'hono' {
   interface Env {
-    Variables: { userId: string };
+    Variables: AppVariables;
     Bindings: AppBindings & Partial<EnvVariables>;
   }
   interface ContextRenderer {
