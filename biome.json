@@ -42,6 +42,7 @@
       "include": [
         "app/routes/**/index.tsx",
         "app/routes/**/_renderer.tsx",
+        "app/islands/**/*.tsx",
         "app/server.ts",
         "drizzle.config.ts"
       ],
