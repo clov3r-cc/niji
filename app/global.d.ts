@@ -7,6 +7,7 @@ type Head = {
 type AppBindings = {
   DB: D1Database;
   KV: KVNamespace;
+  R2: R2Bucket;
 };
 
 type EnvVariables = {

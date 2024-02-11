@@ -25,6 +25,8 @@ export default defineConfig(({ mode }) => {
             kvPersist: true,
             d1Databases: ['DB'],
             d1Persist: true,
+            r2Buckets: ['R2'],
+            r2Persist: true,
           }),
         },
       }),
