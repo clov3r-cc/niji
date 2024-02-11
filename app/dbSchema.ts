@@ -1,9 +1,9 @@
 import { integer, sqliteTable, text, unique } from 'drizzle-orm/sqlite-core';
 
 export const usersTable = sqliteTable('users', {
-  id: text('id').primaryKey().notNull(),
-  profileIconUrl: text('profile_icon_url'),
-  displayName: text('display_name').notNull(),
+  userId: text('user_id').primaryKey().notNull(),
+  name: text('name').notNull(),
+  googleAccountId: text('google_account_id').notNull().unique(),
 });
 
 export const userBooksTable = sqliteTable(
@@ -12,7 +12,7 @@ export const userBooksTable = sqliteTable(
     id: text('id').primaryKey().notNull(),
     userId: text('user_id')
       .notNull()
-      .references(() => usersTable.id),
+      .references(() => usersTable.userId),
     bookName: text('book_name').notNull(),
     bookKana: text('book_kana').notNull(),
     circleName: text('circle_name').notNull(),
@@ -41,7 +41,7 @@ export const userBookNotesTable = sqliteTable(
       .references(() => userBooksTable.id),
     userId: text('user_id')
       .notNull()
-      .references(() => usersTable.id),
+      .references(() => usersTable.userId),
     contents: text('contents').notNull(),
   },
   (table) => ({
@@ -58,7 +58,7 @@ export const userBookLabelsTable = sqliteTable(
       .references(() => userBooksTable.id),
     userId: text('user_id')
       .notNull()
-      .references(() => usersTable.id),
+      .references(() => usersTable.userId),
     contents: text('contents').notNull(),
     color: text('color_code').notNull(),
   },
