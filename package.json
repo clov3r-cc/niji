@@ -11,7 +11,8 @@
     "migration": "run-s migration:gen migration:run",
     "migration:gen": "drizzle-kit generate:sqlite",
     "migration:run": "drizzle-kit push:sqlite",
-    "migration:run:prod": "wrangler d1 migrations apply niji-db"
+    "migration:run:prod": "wrangler d1 migrations apply niji-db",
+    "studio": "drizzle-kit studio --port 9090"
   },
   "dependencies": {
     "@hono/oauth-providers": "^0.3.0",
