@@ -3,4 +3,4 @@ pre-commit:
   commands:
     js-lint:
       glob: "app/*.{js,ts,jsx,tsx}"
-      run: bun run lint
+      run: bunx @biomejs/biome check {staged_files}
