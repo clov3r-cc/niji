@@ -15,14 +15,13 @@ export const POST = createRoute(authorize, (c) => {
   });
   c.env.KV.delete(sessionId);
 
-  return c.text('Singed out!', 200);
+  return c.render(
+    <>
+      <p>サインアウトしました</p>
+      <a href="/">
+        <button type="button">トップへ戻る</button>
+      </a>
+    </>,
+    { title: 'サインアウトしました' },
+  );
 });
-
-export default createRoute((c) =>
-  c.render(
-    <form action="/signout" method="POST">
-      <input type="submit" value="送信" />
-    </form>,
-    { title: 'サインアウトする' },
-  ),
-);

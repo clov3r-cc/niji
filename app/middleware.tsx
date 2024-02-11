@@ -11,6 +11,9 @@ export const authorize: MiddlewareHandler<Env> = async (c, next) => {
       <>
         <h1>You are Unauthorized! Please sign in.</h1>
         <p>middlewre session not found</p>
+        <a href="/signin">
+          <button type="button">サインインする</button>
+        </a>
       </>,
       { title: 'Unauthorized!' },
     );
@@ -21,6 +24,9 @@ export const authorize: MiddlewareHandler<Env> = async (c, next) => {
       <>
         <h1>You are Unauthorized! Please sign in.</h1>
         <p>middlewre user id not found</p>
+        <form action="/signin" method="POST">
+          <input type="submit" value="サインインする" />
+        </form>
       </>,
       { title: 'Unauthorized!' },
     );
