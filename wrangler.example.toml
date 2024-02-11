@@ -1,0 +1,4 @@
+[[d1_databases]]
+binding = "DB"
+database_name = "niji-db"
+database_id = "REPLACE_WITH_YOUR_D1_DB_ID"

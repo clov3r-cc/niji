@@ -44,7 +44,8 @@
       "include": [
         "app/routes/**/index.tsx",
         "app/routes/**/_renderer.tsx",
-        "app/server.ts"
+        "app/server.ts",
+        "drizzle.config.ts"
       ],
       "linter": {
         "rules": {
