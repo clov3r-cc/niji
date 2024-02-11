@@ -13,7 +13,7 @@ export const POST = createRoute(authorize, (c) => {
     maxAge: -60,
     path: '/',
   });
-  c.env.SESSION.delete(sessionId);
+  c.env.KV.delete(sessionId);
 
   return c.text('Singed out!', 200);
 });

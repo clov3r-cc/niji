@@ -12,7 +12,7 @@ export const authorize: MiddlewareHandler<Env> = async (c, next) => {
       { title: 'Unauthorized!' },
     );
   }
-  const userId = await c.env.SESSION.get(sessionId);
+  const userId = await c.env.KV.get(sessionId);
   if (!userId) {
     return c.render(
       <>

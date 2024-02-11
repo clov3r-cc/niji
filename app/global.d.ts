@@ -6,7 +6,7 @@ type Head = {
 
 type AppBindings = {
   DB: D1Database;
-  SESSION: KVNamespace;
+  KV: KVNamespace;
 };
 
 type EnvVariables = {

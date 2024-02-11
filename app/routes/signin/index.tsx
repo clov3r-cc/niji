@@ -27,7 +27,7 @@ export default createRoute(
       path: '/',
     });
     // biome-ignore lint/style/noNonNullAssertion: <explanation>
-    await c.env.SESSION.put(sessionId, user.id!, {
+    await c.env.KV.put(sessionId, user.id!, {
       expirationTtl: token.expires_in,
     });
 
