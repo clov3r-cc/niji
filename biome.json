@@ -40,6 +40,7 @@
     },
     {
       "include": [
+        "app/routes/**/index.ts",
         "app/routes/**/index.tsx",
         "app/routes/**/_renderer.tsx",
         "app/islands/**/*.tsx",
