@@ -25,7 +25,7 @@ export default defineConfig(({ mode }) => {
             compatibilityDate: '2023-12-31',
             kvNamespaces: ['KV'],
             kvPersist: true,
-            d1Databases: ['DB'],
+            d1Databases: ['D1'],
             d1Persist: true,
             r2Buckets: ['R2'],
             r2Persist: true,
