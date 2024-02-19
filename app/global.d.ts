@@ -1,8 +1,8 @@
+import type { User } from '@/features/user/type';
 import {} from 'hono';
-import type { usersTable } from './dbSchema';
 
 type AppVariables = {
-  user?: typeof usersTable.$inferSelect;
+  user?: User;
 };
 
 type AppBindings = {
