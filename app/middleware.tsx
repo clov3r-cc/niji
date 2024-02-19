@@ -1,11 +1,11 @@
+import { getSessionCookie } from '@/features/user';
 import { eq } from 'drizzle-orm';
 import type { Env, MiddlewareHandler } from 'hono';
-import { getCookie } from 'hono/cookie';
 import { usersTable } from './dbSchema';
 import { DB } from './lib';
 
 export const authorize: MiddlewareHandler<Env> = async (c, next) => {
-  const sessionId = getCookie(c, '__session');
+  const sessionId = await getSessionCookie(c);
   if (!sessionId) {
     return c.render(
       <>

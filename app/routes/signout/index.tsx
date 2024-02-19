@@ -1,18 +1,12 @@
-import { getCookie, setCookie } from 'hono/cookie';
+import { clearSessionCookie, getSessionCookie } from '@/features/user';
+import { authorize } from '@/middleware';
 import { createRoute } from 'honox/factory';
-import { authorize } from '../../middleware';
 
-export const POST = createRoute(authorize, (c) => {
-  // biome-ignore lint/style/noNonNullAssertion: the id has already verified by middleware
-  const sessionId = getCookie(c, '__session')!;
+export const POST = createRoute(authorize, async (c) => {
+  // biome-ignore lint/style/noNonNullAssertion: <explanation>
+  const sessionId = await getSessionCookie(c).then((v) => v!);
 
-  setCookie(c, '__session', '', {
-    httpOnly: true,
-    secure: true,
-    sameSite: 'None',
-    maxAge: -60,
-    path: '/',
-  });
+  clearSessionCookie(c);
   c.executionCtx.waitUntil(c.env.KV.delete(sessionId));
   c.set('user', undefined);
 

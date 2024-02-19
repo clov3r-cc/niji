@@ -1,8 +1,8 @@
 import { usersTable } from '@/dbSchema';
+import { setSessionCookie } from '@/features/user';
 import { DB, uuidv4 } from '@/lib';
 import { googleAuth } from '@hono/oauth-providers/google';
 import { eq } from 'drizzle-orm';
-import { setCookie } from 'hono/cookie';
 import { createRoute } from 'honox/factory';
 
 const storeProfileIcon = async (bucket: R2Bucket, userId: string, url?: string) => {
@@ -32,14 +32,7 @@ export default createRoute(
       return c.text('Failed to get the user info', 500);
     }
 
-    const sessionId = `session_${uuidv4()}`;
-    setCookie(c, '__session', sessionId, {
-      httpOnly: true,
-      secure: true,
-      sameSite: 'Lax',
-      maxAge: token.expires_in,
-      path: '/',
-    });
+    const sessionId = await setSessionCookie(c, token.expires_in);
 
     const db = DB(c.env.D1);
     const foundUsers = await db
