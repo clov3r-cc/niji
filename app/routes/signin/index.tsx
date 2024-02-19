@@ -5,6 +5,16 @@ import { eq } from 'drizzle-orm';
 import { setCookie } from 'hono/cookie';
 import { createRoute } from 'honox/factory';
 
+const storeProfileIcon = async (bucket: R2Bucket, userId: string, url?: string) => {
+  if (!url) {
+    return undefined;
+  }
+  const data = await fetch(url).then((v) => v.arrayBuffer());
+  const key = `profile-icon/${userId}`;
+
+  return bucket.put(key, data).then((obj) => obj?.key);
+};
+
 export default createRoute(
   (c, next) =>
     googleAuth({
@@ -36,16 +46,25 @@ export default createRoute(
       .select({ userId: usersTable.userId })
       .from(usersTable)
       .where(eq(usersTable.googleAccountId, googleUserId));
-    if (foundUsers.length === 0) {
+    const isNewUser = foundUsers.length === 0;
+    const userId = isNewUser ? uuidv4() : foundUsers[0].userId;
+    if (isNewUser) {
+      const profileIconKey = await storeProfileIcon(c.env.R2, userId, googleUser.picture);
+
       c.executionCtx.waitUntil(
         db
           .insert(usersTable)
-          .values({ userId: uuidv4(), name: googleUserName, googleAccountId: googleUserId })
+          .values({
+            userId: userId,
+            name: googleUserName,
+            profileIconKey: profileIconKey,
+            googleAccountId: googleUserId,
+          })
           .then(() => undefined),
       );
     }
 
-    await c.env.KV.put(sessionId, foundUsers[0].userId, {
+    await c.env.KV.put(sessionId, userId, {
       expirationTtl: token.expires_in,
     });
 
