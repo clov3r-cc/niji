@@ -3,6 +3,7 @@ import { integer, sqliteTable, text, unique } from 'drizzle-orm/sqlite-core';
 export const usersTable = sqliteTable('users', {
   userId: text('user_id').primaryKey().notNull(),
   name: text('name').notNull(),
+  profileIconKey: text('profile_icon_key'),
   googleAccountId: text('google_account_id').notNull().unique(),
 });
 
