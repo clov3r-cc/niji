@@ -41,7 +41,7 @@
         "shd101wyy.markdown-preview-enhanced",
         "Gruntfuggly.todo-tree",
         "shardulm94.trailing-spaces",
-        "ZixuanChen.vitest-explorer"
+        "vitest.explorer"
       ],
       "settings": {
         "editor.guides.bracketPairs": "active",
