@@ -1,4 +1,4 @@
-import type { User } from '@/features/user/type';
+import type { User } from '@/features/user';
 import {} from 'hono';
 
 type AppVariables = {
