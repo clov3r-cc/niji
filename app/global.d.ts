@@ -6,7 +6,7 @@ type AppVariables = {
 };
 
 type AppBindings = {
-  DB: D1Database;
+  D1: D1Database;
   KV: KVNamespace;
   R2: R2Bucket;
 };

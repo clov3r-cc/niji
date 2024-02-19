@@ -32,7 +32,7 @@ export const authorize: MiddlewareHandler<Env> = async (c, next) => {
     );
   }
   if (!c.get('user')) {
-    const foundUsers = await DB(c.env.DB).select().from(usersTable).where(eq(usersTable.userId, userId)).limit(1);
+    const foundUsers = await DB(c.env.D1).select().from(usersTable).where(eq(usersTable.userId, userId)).limit(1);
     c.set('user', foundUsers[0]);
   }
 

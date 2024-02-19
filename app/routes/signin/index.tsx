@@ -41,7 +41,7 @@ export default createRoute(
       path: '/',
     });
 
-    const db = DB(c.env.DB);
+    const db = DB(c.env.D1);
     const foundUsers = await db
       .select({ userId: usersTable.userId })
       .from(usersTable)
