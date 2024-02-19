@@ -14,6 +14,7 @@ export const POST = createRoute(authorize, (c) => {
     path: '/',
   });
   c.executionCtx.waitUntil(c.env.KV.delete(sessionId));
+  c.set('user', undefined);
 
   return c.render(
     <>
