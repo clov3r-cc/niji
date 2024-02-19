@@ -13,7 +13,7 @@ export const POST = createRoute(authorize, (c) => {
     maxAge: -60,
     path: '/',
   });
-  c.env.KV.delete(sessionId);
+  c.executionCtx.waitUntil(c.env.KV.delete(sessionId));
 
   return c.render(
     <>
