@@ -19,8 +19,9 @@ export default defineConfig(({ mode }) => {
         devServer: {
           env: getEnv({
             bindings: {
-              GOOGLE_ID: process.env.GOOGLE_ID || '',
-              GOOGLE_SECRET: process.env.GOOGLE_SECRET || '',
+              GOOGLE_ID: process.env.GOOGLE_ID ?? null,
+              GOOGLE_SECRET: process.env.GOOGLE_SECRET ?? null,
+              SESSION_COOKIE_SECRET: process.env.SESSION_COOKIE_SECRET ?? null,
             },
             compatibilityDate: '2023-12-31',
             kvNamespaces: ['KV'],

@@ -14,6 +14,7 @@ type AppBindings = {
 type EnvVariables = {
   GOOGLE_ID: string;
   GOOGLE_SECRET: string;
+  SESSION_COOKIE_SECRET: string;
 };
 
 type Head = {
