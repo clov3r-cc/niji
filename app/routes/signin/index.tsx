@@ -1,5 +1,5 @@
 import { usersTable } from '@/dbSchema';
-import { setSessionCookie } from '@/features/user';
+import { saveSession, setSessionCookie } from '@/features/user';
 import { DB, uuidv4 } from '@/lib';
 import { googleAuth } from '@hono/oauth-providers/google';
 import { eq } from 'drizzle-orm';
@@ -57,9 +57,7 @@ export default createRoute(
       );
     }
 
-    await c.env.KV.put(sessionId, userId, {
-      expirationTtl: token.expires_in,
-    });
+    c.executionCtx.waitUntil(saveSession(c.env.KV, sessionId, userId, token.expires_in));
 
     return c.redirect('/', 302);
   },

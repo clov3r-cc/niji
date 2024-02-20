@@ -1,4 +1,4 @@
-import { clearSessionCookie, getSessionCookie } from '@/features/user';
+import { clearSession, clearSessionCookie, getSessionCookie } from '@/features/user';
 import { authorize } from '@/middleware';
 import { createRoute } from 'honox/factory';
 
@@ -7,7 +7,7 @@ export const POST = createRoute(authorize, async (c) => {
   const sessionId = await getSessionCookie(c).then((v) => v!);
 
   clearSessionCookie(c);
-  c.executionCtx.waitUntil(c.env.KV.delete(sessionId));
+  c.executionCtx.waitUntil(clearSession(c.env.KV, sessionId));
   c.set('user', undefined);
 
   return c.render(

@@ -1,4 +1,4 @@
-import { getSessionCookie } from '@/features/user';
+import { getSession, getSessionCookie } from '@/features/user';
 import { eq } from 'drizzle-orm';
 import type { Env, MiddlewareHandler } from 'hono';
 import { usersTable } from './dbSchema';
@@ -18,7 +18,7 @@ export const authorize: MiddlewareHandler<Env> = async (c, next) => {
       { title: 'Unauthorized!' },
     );
   }
-  const userId = await c.env.KV.get(sessionId);
+  const userId = await getSession(c.env.KV, sessionId);
   if (!userId) {
     return c.render(
       <>
