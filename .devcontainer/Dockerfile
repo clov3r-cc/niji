@@ -1,3 +1,6 @@
+ARG DENO_VERSION=1.40.5
+FROM denoland/deno:bin-$DENO_VERSION AS deno
+
 FROM --platform=linux/amd64 mcr.microsoft.com/devcontainers/base:ubuntu
 
 ARG USERNAME=vscode
@@ -5,6 +8,10 @@ ARG USER_UID=1000
 ARG USER_GID=${USER_UID}
 
 WORKDIR /opt
+
+# Install deno
+
+COPY --from=deno /deno /usr/local/bin/deno
 
 # Install bun
 
