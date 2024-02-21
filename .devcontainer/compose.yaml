@@ -9,4 +9,6 @@ services:
         target: /workspace
     environment:
       - TZ=Asia/Tokyo
+      - SKIP_DOCKER=y
+      - SKIP_DENO=y
     command: sleep infinity
