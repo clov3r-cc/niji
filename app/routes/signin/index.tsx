@@ -1,8 +1,6 @@
-import { usersTable } from '@/dbSchema';
-import { saveSession, setSessionCookie } from '@/features/user';
-import { DB, uuidv4 } from '@/lib';
+import { addUser, findUserByGoogleAccountId, saveSession, setSessionCookie } from '@/features/user';
+import { uuidv4 } from '@/lib';
 import { googleAuth } from '@hono/oauth-providers/google';
-import { eq } from 'drizzle-orm';
 import { createRoute } from 'honox/factory';
 
 const storeProfileIcon = async (bucket: R2Bucket, userId: string, url?: string) => {
@@ -25,35 +23,23 @@ export default createRoute(
   async (c) => {
     const token = c.get('token');
     const googleUser = c.get('user-google');
-    const googleUserId = googleUser?.id;
+    const googleAccountId = googleUser?.id;
     const googleUserName = googleUser?.name;
 
-    if (!(token && googleUser && googleUserId && googleUserName)) {
+    if (!(token && googleUser && googleAccountId && googleUserName)) {
       return c.text('Failed to get the user info', 500);
     }
 
     const sessionId = await setSessionCookie(c, token.expires_in);
 
-    const db = DB(c.env.D1);
-    const foundUsers = await db
-      .select({ userId: usersTable.userId })
-      .from(usersTable)
-      .where(eq(usersTable.googleAccountId, googleUserId));
-    const isNewUser = foundUsers.length === 0;
-    const userId = isNewUser ? uuidv4() : foundUsers[0].userId;
+    const user = await findUserByGoogleAccountId(c.env.D1, googleAccountId);
+    const isNewUser = !user;
+    const userId = isNewUser ? uuidv4() : user.userId;
     if (isNewUser) {
       const profileIconKey = await storeProfileIcon(c.env.R2, userId, googleUser.picture);
 
       c.executionCtx.waitUntil(
-        db
-          .insert(usersTable)
-          .values({
-            userId: userId,
-            name: googleUserName,
-            profileIconKey: profileIconKey,
-            googleAccountId: googleUserId,
-          })
-          .then(() => undefined),
+        addUser(c.env.D1, { userId, name: googleUserName, googleAccountId, profileIconKey }).then(() => undefined),
       );
     }
 

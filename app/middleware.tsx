@@ -1,8 +1,5 @@
-import { getSession, getSessionCookie } from '@/features/user';
-import { eq } from 'drizzle-orm';
+import { findUserByUserId, getSession, getSessionCookie } from '@/features/user';
 import type { Env, MiddlewareHandler } from 'hono';
-import { usersTable } from './dbSchema';
-import { DB } from './lib';
 
 export const authorize: MiddlewareHandler<Env> = async (c, next) => {
   const sessionId = await getSessionCookie(c);
@@ -32,8 +29,9 @@ export const authorize: MiddlewareHandler<Env> = async (c, next) => {
     );
   }
   if (!c.get('user')) {
-    const foundUsers = await DB(c.env.D1).select().from(usersTable).where(eq(usersTable.userId, userId)).limit(1);
-    c.set('user', foundUsers[0]);
+    const foundUser = await findUserByUserId(c.env.D1, userId);
+    // biome-ignore lint/style/noNonNullAssertion: <explanation>
+    c.set('user', foundUser!);
   }
 
   await next();
