@@ -1,0 +1,51 @@
+{
+  "name": "niji",
+  "private": true,
+  "sideEffects": false,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build --mode client && vite build",
+    "preview": "wrangler pages dev",
+    "deploy": "bun run build && wrangler pages deploy",
+    "lint": "bunx @biomejs/biome check",
+    "lint:fix": "bunx @biomejs/biome check --apply",
+    "test": "vitest run",
+    "migrate": "run-s migrate:gen migrate:run",
+    "migrate:prod": "run-s migrate:gen migrate:run:prod",
+    "migrate:gen": "drizzle-kit generate",
+    "migrate:run": "wrangler d1 migrations apply niji-db",
+    "migrate:run:prod": "bun run migrate:run -- --remote",
+    "up-deps": "bunx npm-check-updates --format group --interactive",
+    "postinstall": "typesync || :"
+  },
+  "dependencies": {
+    "@mikuroxina/mini-fn": "^6.2.1",
+    "drizzle-orm": "^0.30.10",
+    "hono": "^4.3.11",
+    "nanoid": "^5.0.7",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^1.7.3",
+    "@cloudflare/vitest-pool-workers": "^0.2.12",
+    "@cloudflare/workers-types": "^4.20240512.0",
+    "@hono/vite-cloudflare-pages": "^0.4.0",
+    "@hono/vite-dev-server": "^0.12.1",
+    "@libsql/client": "^0.6.0",
+    "@tsconfig/strictest": "^2.0.5",
+    "@types/react": "^18.3.3",
+    "@types/react-dom": "^18.3.0",
+    "@vitest/coverage-istanbul": "^1.6.0",
+    "drizzle-kit": "^0.21.4",
+    "npm-run-all": "^4.1.5",
+    "typescript": "^5.4.5",
+    "typesync": "^0.12.1",
+    "vite": "^5.2.11",
+    "vite-tsconfig-paths": "^4.3.2",
+    "vitest": "1.5.0",
+    "wrangler": "^3.57.1"
+  }
+}
