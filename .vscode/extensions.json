@@ -1,0 +1,13 @@
+{
+  "recommendations": [
+    "biomejs.biome",
+    "christian-kohler.npm-intellisense",
+    "christian-kohler.path-intellisense",
+    "formulahendry.auto-complete-tag",
+    "me-dutour-mathieu.vscode-github-actions",
+    "oven.bun-vscode",
+    "stylelint.vscode-stylelint",
+    "tamasfe.even-better-toml",
+    "rangav.vscode-thunder-client"
+  ]
+}
