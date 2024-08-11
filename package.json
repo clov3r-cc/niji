@@ -30,7 +30,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "^1.7.3",
-    "@cloudflare/vitest-pool-workers": "^0.2.12",
+    "@cloudflare/vitest-pool-workers": "^0.4.0",
     "@cloudflare/workers-types": "^4.20240512.0",
     "@hono/vite-cloudflare-pages": "^0.4.0",
     "@hono/vite-dev-server": "^0.12.1",
