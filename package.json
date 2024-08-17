@@ -21,7 +21,7 @@
   },
   "dependencies": {
     "@mikuroxina/mini-fn": "^6.2.1",
-    "drizzle-orm": "^0.30.10",
+    "drizzle-orm": "^0.33.0",
     "hono": "^4.3.11",
     "nanoid": "^5.0.7",
     "react": "^18.3.1",
