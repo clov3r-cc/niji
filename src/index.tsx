@@ -1,34 +1,34 @@
-import { Hono } from "hono";
-import { renderToString } from "react-dom/server";
-import { apiRoutes } from "./api";
+import { renderToString } from 'react-dom/server';
+import { Hono } from 'hono';
+import { apiRoutes } from '@/api';
 
 const app = new Hono();
 
-app.route("/api", apiRoutes);
+app.route('/api', apiRoutes);
 
-app.get("*", (c) => {
-  return c.html(
+app.get('*', (c) =>
+  c.html(
     renderToString(
       <html lang="ja">
         <head>
           <meta charSet="utf-8" />
           <meta content="width=device-width, initial-scale=1" name="viewport" />
           <link
-            rel="stylesheet"
             href="https://cdn.simplecss.org/simple.min.css"
+            rel="stylesheet"
           />
           {import.meta.env.PROD ? (
-            <script type="module" src="/static/web/index.js"></script>
+            <script src="/static/web/index.js" type="module" />
           ) : (
-            <script type="module" src="/src/web/index.tsx"></script>
+            <script src="/src/web/index.tsx" type="module" />
           )}
         </head>
         <body>
-          <div id="root"></div>
+          <div id="root" />
         </body>
-      </html>
-    )
-  );
-});
+      </html>,
+    ),
+  ),
+);
 
 export default app;

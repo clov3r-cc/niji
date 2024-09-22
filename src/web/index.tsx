@@ -1,28 +1,27 @@
-import { createRoot } from "react-dom/client";
-import { StrictMode } from "react";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-function App() {
-  return (
-    <>
-      <h1>Hello, Hono with React!</h1>
-      <h2>Example of useState()</h2>
-      <p>Thanks for your coming!</p>
-    </>
-  );
-}
+const App = () => (
+  <>
+    <h1>Hello, Hono with React!</h1>
+    <h2>Example of useState()</h2>
+    <p>Thanks for your coming!</p>
+  </>
+);
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path: '/',
     element: <App />,
   },
 ]);
 
-const domNode = document.getElementById("root")!;
+// eslint-disable-next-line @typescript-eslint/no-non-null-assertion
+const domNode = document.getElementById('root')!;
 const root = createRoot(domNode);
 root.render(
   <StrictMode>
     <RouterProvider router={router} />
-  </StrictMode>
+  </StrictMode>,
 );

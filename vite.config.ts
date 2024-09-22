@@ -1,15 +1,15 @@
-import pages from "@hono/vite-build/cloudflare-pages";
-import devServer from "@hono/vite-dev-server";
-import { defineConfig } from "vite";
+import pages from '@hono/vite-build/cloudflare-pages';
+import devServer from '@hono/vite-dev-server';
+import { defineConfig } from 'vite';
 
 export default defineConfig(async ({ mode }) => {
-  if (mode === "client") {
+  if (mode === 'client') {
     return {
       build: {
         rollupOptions: {
-          input: "src/web/index.tsx",
+          input: 'src/web/index.tsx',
           output: {
-            entryFileNames: "static/web/index.js",
+            entryFileNames: 'static/web/index.js',
           },
         },
       },
@@ -18,12 +18,12 @@ export default defineConfig(async ({ mode }) => {
 
   return {
     ssr: {
-      external: ["react", "react-dom"],
+      external: ['react', 'react-dom'],
     },
     plugins: [
       pages(),
       devServer({
-        entry: "src/index.tsx",
+        entry: 'src/index.tsx',
       }),
     ],
   };
