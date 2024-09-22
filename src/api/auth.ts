@@ -8,7 +8,6 @@ import {
   oidcAuthMiddleware,
 } from "@hono/oidc-auth";
 import { OidcAuthClaims, Hono } from "hono";
-import { env } from "hono/adapter";
 
 declare module "hono" {
   interface OidcAuthClaims {
@@ -24,6 +23,7 @@ declare module "hono" {
 const oidcClaimsHook = async (
   orig: OidcAuth | undefined,
   claims: IDToken | undefined,
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   _response: TokenEndpointResponses
 ): Promise<OidcAuthClaims> => {
   return {
