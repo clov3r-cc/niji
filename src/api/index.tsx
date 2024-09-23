@@ -9,25 +9,6 @@ const app = new Hono().use(
   cors({ origin: 'http://localhost:5173' }),
 );
 
-app.get('*', (c) =>
-  c.html(`
-    <html lang="ja">
-      <head>
-        <meta charSet="utf-8" />
-        <meta content="width=device-width, initial-scale=1" name="viewport" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.simplecss.org/simple.min.css"
-        />
-        <script type="module" src="/static/web/index.js"></script>
-      </head>
-      <body>
-        <div id="root"></div>
-      </body>
-    </html>
-  `),
-);
-
 export const apiRoutes = app
   .get('/health', (c) => c.json({ status: 200 }))
   .route('/auth', authApi)
