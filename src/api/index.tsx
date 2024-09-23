@@ -1,4 +1,4 @@
-import { getAuth } from '@hono/oidc-auth';
+import { getAuth, oidcAuthMiddleware } from '@hono/oidc-auth';
 import { Hono } from 'hono';
 import { cors } from 'hono/cors';
 import { secureHeaders } from 'hono/secure-headers';
@@ -13,6 +13,7 @@ const app = new Hono().use(
 export const apiRoutes = app
   .get('/health', (c) => c.json({ status: 200 }))
   .route('/auth', authApi)
+  .use(oidcAuthMiddleware())
   .get('/me', async (c) => {
     const auth = await getAuth(c);
 

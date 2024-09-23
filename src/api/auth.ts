@@ -5,7 +5,6 @@ import {
   revokeSession,
   processOAuthCallback,
   getAuth,
-  oidcAuthMiddleware,
 } from '@hono/oidc-auth';
 import { OidcAuthClaims, Hono } from 'hono';
 
@@ -54,5 +53,4 @@ export const authApi = new Hono()
         .then((auth) => !!auth)
         .catch(() => false),
     }),
-  )
-  .use(oidcAuthMiddleware());
+  );
