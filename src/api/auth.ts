@@ -25,14 +25,17 @@ const oidcClaimsHook = async (
   claims: IDToken | undefined,
   // eslint-disable-next-line unused-imports/no-unused-vars
   _response: TokenEndpointResponses,
-): Promise<OidcAuthClaims> => ({
-  // アカウント名（フルネーム）
-  name: (claims?.name as string) ?? orig?.name ?? '',
-  // GoogleアカウントのID
-  sub: claims?.sub ?? orig?.sub ?? '',
-  // Googleアカウントのプロフィール画像
-  picture: (claims?.picture as string) ?? orig?.picture ?? '',
-});
+): Promise<OidcAuthClaims> =>
+  new Promise((resolve) => {
+    resolve({
+      // アカウント名（フルネーム）
+      name: (claims?.name as string | undefined) ?? orig?.name ?? '',
+      // GoogleアカウントのID
+      sub: claims?.sub ?? orig?.sub ?? '',
+      // Googleアカウントのプロフィール画像
+      picture: (claims?.picture as string | undefined) ?? orig?.picture ?? '',
+    });
+  });
 
 export const authApi = new Hono()
   .get('/logout', async (c) => {
