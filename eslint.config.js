@@ -18,7 +18,6 @@ export default tseslint.config(
   {
     extends: [
       eslint.configs.recommended,
-      ...tseslint.configs.strict,
       pluginImportX.flatConfigs.recommended,
       pluginImportX.flatConfigs.typescript,
     ],
@@ -69,6 +68,7 @@ export default tseslint.config(
     },
     languageOptions: { parser: typescriptParser },
     extends: [
+      ...tseslint.configs.strict,
       pluginReact.configs.flat.all,
       pluginReactJSXRuntime,
       pluginJsxA11y.flatConfigs.recommended,
