@@ -1,5 +1,6 @@
 import pages from '@hono/vite-build/cloudflare-pages';
 import devServer from '@hono/vite-dev-server';
+import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 import { defineConfig } from 'vite';
 
 export default defineConfig(({ mode }) => {
@@ -13,6 +14,7 @@ export default defineConfig(({ mode }) => {
           },
         },
       },
+      plugins: [typescriptPaths()],
     };
   }
 
@@ -21,6 +23,8 @@ export default defineConfig(({ mode }) => {
       external: ['react', 'react-dom'],
     },
     plugins: [
+      // Prevents this plugin replace the extension from '.ts(x)' to '.js' and the replacement occur an error which says: Could not load someFile.js
+      typescriptPaths({ preserveExtensions: true }),
       pages(),
       devServer({
         entry: 'src/index.tsx',
