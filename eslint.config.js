@@ -1,6 +1,5 @@
 import eslint from '@eslint/js';
 import tseslint from 'typescript-eslint';
-import typescriptParser from '@typescript-eslint/parser';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
 import pluginReactJSXRuntime from 'eslint-plugin-react/configs/jsx-runtime.js';
@@ -19,13 +18,13 @@ export default tseslint.config(
     extends: [
       eslint.configs.recommended,
       pluginImportX.flatConfigs.recommended,
-      pluginImportX.flatConfigs.typescript,
     ],
     plugins: {
       'unused-imports': pluginUnusedImport,
       'prefer-arrow-functions': fixupPluginRules(pluginPreferArrowFunctions),
     },
     rules: {
+      // This rule is disabled b/c it's already covered by 'eslint-plugin-unused-imports'
       'no-unused-vars': 'off',
       'unused-imports/no-unused-imports': 'error',
       'unused-imports/no-unused-vars': 'error',
@@ -63,21 +62,32 @@ export default tseslint.config(
   },
   {
     files: ['**/*.{ts,tsx}'],
-    settings: {
-      react: { version: 'detect' },
-    },
-    languageOptions: { parser: typescriptParser },
     extends: [
-      ...tseslint.configs.strict,
+      ...tseslint.configs.strictTypeChecked,
+      pluginImportX.flatConfigs.typescript,
+    ],
+    languageOptions: {
+      // Need not to set 'parser' b/c it's already set by 'typescript-eslint'
+      parserOptions: { project: './tsconfig.json' },
+    },
+    rules: {
+      // This rule is disabled b/c it's already covered by 'eslint-plugin-unused-imports'
+      '@typescript-eslint/no-unused-vars': 'off',
+    },
+  },
+  {
+    files: ['**/*.tsx'],
+    extends: [
       pluginReact.configs.flat.all,
       pluginReactJSXRuntime,
-      pluginJsxA11y.flatConfigs.recommended,
+      pluginImportX.flatConfigs.react,
+      pluginJsxA11y.flatConfigs.strict,
     ],
     plugins: {
       'react-hooks': fixupPluginRules(pluginReactHooks),
     },
     rules: {
-      'react/jsx-filename-extension': [1, { extensions: ['.tsx'] }],
+      'react/jsx-filename-extension': ['error', { extensions: ['.tsx'] }],
       'react/function-component-definition': [
         'error',
         {
@@ -87,7 +97,11 @@ export default tseslint.config(
       ],
       'react/jsx-no-literals': 'off',
       ...pluginReactHooks.configs.recommended.rules,
-      '@typescript-eslint/no-unused-vars': 'off',
+    },
+    settings: {
+      // Need to set React version b/c it's not set by 'eslint-plugin-react'
+      // https://github.com/jsx-eslint/eslint-plugin-react#configuration
+      react: { version: 'detect' },
     },
   },
   prettier,
