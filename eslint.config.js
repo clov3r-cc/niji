@@ -14,7 +14,59 @@ import { fixupPluginRules } from '@eslint/compat';
 
 export default tseslint.config(
   {
-    ignores: ['dist', 'public', '.wrangler', '*.config.ts'],
+    ignores: ['dist', 'public', '.wrangler', '*.config.{js, ts}'],
+  },
+  {
+    files: ['**/*.js'],
+    languageOptions: {
+      globals: { ...globals.browser, ...globals.node },
+    },
+    extends: [
+      eslint.configs.recommended,
+      ...tseslint.configs.strict,
+      pluginImportX.flatConfigs.recommended,
+      pluginImportX.flatConfigs.typescript,
+    ],
+    plugins: {
+      'unused-imports': pluginUnusedImport,
+      'prefer-arrow-functions': fixupPluginRules(pluginPreferArrowFunctions),
+    },
+    rules: {
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
+      'unused-imports/no-unused-imports': 'error',
+      'unused-imports/no-unused-vars': 'error',
+      'import-x/order': [
+        'error',
+        {
+          groups: [
+            'builtin',
+            'external',
+            'parent',
+            'sibling',
+            'index',
+            'object',
+            'type',
+          ],
+          pathGroups: [
+            {
+              pattern: '{react,react-dom/**,react-router-dom}',
+              group: 'builtin',
+              position: 'before',
+            },
+          ],
+          pathGroupsExcludedImportTypes: ['builtin'],
+          alphabetize: {
+            order: 'asc',
+          },
+          'newlines-between': 'never',
+        },
+      ],
+      'prefer-arrow-functions/prefer-arrow-functions': [
+        'error',
+        { returnStyle: 'implicit' },
+      ],
+    },
   },
   {
     files: ['**/*.{ts,tsx}'],
