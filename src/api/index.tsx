@@ -6,6 +6,7 @@ import { authApi } from './auth';
 
 const app = new Hono().use(
   secureHeaders(),
+  // TODO: Use env
   cors({ origin: 'http://localhost:5173' }),
 );
 
