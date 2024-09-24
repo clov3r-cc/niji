@@ -12,6 +12,6 @@ runs:
       shell: bash
       id: bun-version
       run: |
-        VER=$(rg "^bun =" .prototools | awk '{print $3}' | sed 's/"//g')
+        VER=$(grep "^bun =" .prototools | awk '{print $3}' | sed 's/"//g')
         echo "bun-version=${VER}" >> "${GITHUB_OUTPUT}"
         echo "$VER"
