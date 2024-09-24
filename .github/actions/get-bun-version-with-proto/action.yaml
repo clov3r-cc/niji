@@ -2,7 +2,7 @@ name: get-bun-version-with-proto
 description: Outputs Bun version from .prototools.
 outputs:
   bun-version:
-    value: ${{ steps.sha.outputs.sha }}
+    value: ${{ steps.runner.outputs.bun-version }}
     description: Bun version.
 runs:
   using: composite
@@ -10,7 +10,7 @@ runs:
     - uses: actions/checkout@692973e3d937129bcbf40652eb9f2f61becf3332 # v4.1.7
     - name: Output Bun version
       shell: bash
-      id: bun-version
+      id: runner
       run: |
         VER=$(grep "^bun =" .prototools | awk '{print $3}' | sed 's/"//g')
         echo "bun-version=${VER}" >> "${GITHUB_OUTPUT}"
