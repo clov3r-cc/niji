@@ -28,6 +28,8 @@
     "@hono/vite-build": "^1.0.0",
     "@hono/vite-dev-server": "^0.15.1",
     "@stylistic/eslint-plugin": "^2.8.0",
+    "@types/eslint-config-prettier": "~6.11.3",
+    "@types/eslint-plugin-jsx-a11y": "~6.9.0",
     "@types/eslint__js": "~8.42.3",
     "@types/react": "^18.3.8",
     "@types/react-dom": "^18.3.0",
