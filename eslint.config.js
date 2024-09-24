@@ -1,4 +1,5 @@
 import eslint from '@eslint/js';
+import stylistic from '@stylistic/eslint-plugin';
 import tseslint from 'typescript-eslint';
 import pluginReact from 'eslint-plugin-react';
 import pluginReactHooks from 'eslint-plugin-react-hooks';
@@ -18,10 +19,15 @@ export default tseslint.config(
     extends: [
       eslint.configs.recommended,
       pluginImportX.flatConfigs.recommended,
+      stylistic.configs.customize({
+        arrowParens: true,
+        semi: true,
+      }),
     ],
     plugins: {
       'unused-imports': pluginUnusedImport,
       'prefer-arrow-functions': fixupPluginRules(pluginPreferArrowFunctions),
+      '@stylistic': stylistic,
     },
     rules: {
       // This rule is disabled b/c it's already covered by 'eslint-plugin-unused-imports'
@@ -57,6 +63,10 @@ export default tseslint.config(
       'prefer-arrow-functions/prefer-arrow-functions': [
         'error',
         { returnStyle: 'implicit' },
+      ],
+      '@stylistic/padding-line-between-statements': [
+        'error',
+        { blankLine: 'always', prev: '*', next: 'return' },
       ],
     },
   },
