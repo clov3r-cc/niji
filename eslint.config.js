@@ -37,15 +37,7 @@ export default tseslint.config(
       'import-x/order': [
         'error',
         {
-          groups: [
-            'builtin',
-            'external',
-            'parent',
-            'sibling',
-            'index',
-            'object',
-            'type',
-          ],
+          groups: ['builtin', 'external', 'parent', 'sibling', 'index', 'object', 'type'],
           pathGroups: [
             {
               pattern: '{react,react-dom/**,react-router-dom}',
@@ -60,22 +52,13 @@ export default tseslint.config(
           'newlines-between': 'never',
         },
       ],
-      'prefer-arrow-functions/prefer-arrow-functions': [
-        'error',
-        { returnStyle: 'implicit' },
-      ],
-      '@stylistic/padding-line-between-statements': [
-        'error',
-        { blankLine: 'always', prev: '*', next: 'return' },
-      ],
+      'prefer-arrow-functions/prefer-arrow-functions': ['error', { returnStyle: 'implicit' }],
+      '@stylistic/padding-line-between-statements': ['error', { blankLine: 'always', prev: '*', next: 'return' }],
     },
   },
   {
     files: ['**/*.{ts,tsx}'],
-    extends: [
-      ...tseslint.configs.strictTypeChecked,
-      pluginImportX.flatConfigs.typescript,
-    ],
+    extends: [...tseslint.configs.strictTypeChecked, pluginImportX.flatConfigs.typescript],
     languageOptions: {
       parserOptions: {
         // Need not to set 'parser' b/c it's already set by 'typescript-eslint'

@@ -1,0 +1,43 @@
+name: CI
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  build:
+    name: Build artifact
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get Bun ver
+        uses: ./.github/actions/get-bun-version-with-proto
+        id: bun-version
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ steps.bun-version.outputs.bun-version }}
+      - name: Install dependencies
+        run: bun install
+      - name: Build artifact
+        run: bun run build
+  lint:
+    name: Lint and format
+    runs-on: ubuntu-22.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get Bun ver
+        uses: ./.github/actions/get-bun-version-with-proto
+        id: bun-version
+      - name: Setup bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: ${{ steps.bun-version.outputs.bun-version }}
+      - name: Install dependencies
+        run: bun install
+      - name: Run ESLint
+        run: bun run lint
+      - name: Run Prettier
+        run: bun run format
