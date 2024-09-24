@@ -8,6 +8,7 @@ on:
       - main
 jobs:
   build:
+    name: Build artifact
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
@@ -23,6 +24,7 @@ jobs:
       - name: Build artifact
         run: bun run build
   lint:
+    name: Lint and format
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
