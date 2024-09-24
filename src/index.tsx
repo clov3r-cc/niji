@@ -6,6 +6,14 @@ const app = new Hono();
 
 app.route('/api', apiRoutes);
 
+const SwitchScript = () => import.meta.env.PROD
+  ? (
+      <script src="/static/web/index.js" type="module" />
+    )
+  : (
+      <script src="/src/web/index.tsx" type="module" />
+    );
+
 app.get('*', (c) =>
   c.html(
     renderToString(
@@ -17,11 +25,7 @@ app.get('*', (c) =>
             href="https://cdn.simplecss.org/simple.min.css"
             rel="stylesheet"
           />
-          {import.meta.env.PROD ? (
-            <script src="/static/web/index.js" type="module" />
-          ) : (
-            <script src="/src/web/index.tsx" type="module" />
-          )}
+          <SwitchScript />
         </head>
         <body>
           <div id="root" />
