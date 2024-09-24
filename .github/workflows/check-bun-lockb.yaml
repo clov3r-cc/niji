@@ -11,10 +11,13 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
+      - name: Get Bun ver
+        uses: ./.github/actions/get-bun-version-with-proto
+        id: bun-version
       - name: Setup bun
         uses: oven-sh/setup-bun@v2
         with:
-          bun-version-file: .prototools
+          bun-version: ${{ steps.bun-version.outputs.bun-version }}
       - name: Setup deps
         run: bun install --yarn
       - name: check lock diff
