@@ -1,4 +1,4 @@
-name: Check bun.lockb diffrences
+name: Check bun.lockb differences
 on:
   push:
     branches:
@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 jobs:
   checkBunLockb:
-    name: Check bun.lockb diffrences
+    name: Check bun.lockb differences
     runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v4
