@@ -40,7 +40,6 @@
     "eslint-plugin-react": "^7.36.1",
     "eslint-plugin-react-hooks": "^4.6.2",
     "eslint-plugin-unused-imports": "^4.1.4",
-    "globals": "^15.9.0",
     "prettier": "^3.3.3",
     "rollup-plugin-typescript-paths": "^1.5.0",
     "typescript-eslint": "^8.6.0",
