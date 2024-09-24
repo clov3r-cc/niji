@@ -67,8 +67,14 @@ export default tseslint.config(
       pluginImportX.flatConfigs.typescript,
     ],
     languageOptions: {
-      // Need not to set 'parser' b/c it's already set by 'typescript-eslint'
-      parserOptions: { project: './tsconfig.json' },
+      parserOptions: {
+        // Need not to set 'parser' b/c it's already set by 'typescript-eslint'
+        project: './tsconfig.json',
+        // "To tap into TypeScript's additional powers, there are two small changes you need to make to your config file:"
+        // https://github.com/typescript-eslint/typescript-eslint/blob/b88ea33f34e0b5f6fc5bd3463a5b32a5c9df8b7e/docs/getting-started/Typed_Linting.mdx
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
     },
     rules: {
       // This rule is disabled b/c it's already covered by 'eslint-plugin-unused-imports'
