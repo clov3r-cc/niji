@@ -9,7 +9,7 @@ on:
 jobs:
   build:
     name: Build artifact
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Get Bun ver
@@ -25,7 +25,7 @@ jobs:
         run: bun run build
   lint:
     name: Lint and format
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-24.04
     steps:
       - uses: actions/checkout@v4
       - name: Get Bun ver
