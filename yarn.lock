@@ -1855,10 +1855,10 @@ drizzle-kit@^0.30.0:
     esbuild-register "^3.5.0"
     gel "^2.0.0"
 
-drizzle-orm@^0.39.0:
-  version "0.39.3"
-  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-0.39.3.tgz#4f844d5849a0236082340e47e2dc9eecc1e0e64c"
-  integrity sha512-EZ8ZpYvDIvKU9C56JYLOmUskazhad+uXZCTCRN4OnRMsL+xAJ05dv1eCpAG5xzhsm1hqiuC5kAZUCS924u2DTw==
+drizzle-orm@^0.40.0:
+  version "0.40.0"
+  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-0.40.0.tgz#bdcc58d3340ef14e592c6b6c65db89448b08def9"
+  integrity sha512-7ptk/HQiMSrEZHnAsSlBESXWj52VwgMmyTEfoNmpNN2ZXpcz13LwHfXTIghsAEud7Z5UJhDOp8U07ujcqme7wg==
 
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
   version "1.0.1"
@@ -3746,16 +3746,16 @@ react-is@^16.13.1:
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-router-dom@^7.0.0:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.1.5.tgz#6b706a5503c01d99c1af69336a7de2e21cadd339"
-  integrity sha512-/4f9+up0Qv92D3bB8iN5P1s3oHAepSGa9h5k6tpTFlixTTskJZwKGhJ6vRJ277tLD1zuaZTt95hyGWV1Z37csQ==
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.2.0.tgz#b8a7eae7827cd5207cf91e89807d01217737797d"
+  integrity sha512-cU7lTxETGtQRQbafJubvZKHEn5izNABxZhBY0Jlzdv0gqQhCPQt2J8aN5ZPjS6mQOXn5NnirWNh+FpE8TTYN0Q==
   dependencies:
-    react-router "7.1.5"
+    react-router "7.2.0"
 
-react-router@7.1.5:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.1.5.tgz#c9e19d329d9ce2215fdae844ab6b023b911094db"
-  integrity sha512-8BUF+hZEU4/z/JD201yK6S+UYhsf58bzYIDq2NS1iGpwxSXDu7F+DeGSkIXMFBuHZB21FSiCzEcUb18cQNdRkA==
+react-router@7.2.0:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.2.0.tgz#a8f2729d39f634a7a870d14dd906a1b406f39d6f"
+  integrity sha512-fXyqzPgCPZbqhrk7k3hPcCpYIlQ2ugIXDboHUzhJISFVy2DEPsmHgN588MyGmkIOv3jDgNfUE3kJi83L28s/LQ==
   dependencies:
     "@types/cookie" "^0.6.0"
     cookie "^1.0.1"
