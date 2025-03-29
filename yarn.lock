@@ -667,9 +667,9 @@
     oauth4webapi "^2.6.0"
 
 "@hono/vite-build@^1.0.0":
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/@hono/vite-build/-/vite-build-1.3.0.tgz#58da439620603c1a12f41df2b070f16857de5b50"
-  integrity sha512-YBL2fj12noNbwbpTDPrpsQY0QMC5q5UnkzoaOmSvhVQv6ffuv/p/EkwQxYOotDps3gcJPiNJsvgcgTtjEyC2aA==
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/@hono/vite-build/-/vite-build-1.4.0.tgz#18f9770f1826d7661f852bff535d6393f2f2eaa4"
+  integrity sha512-75uDvJ9xqZL6xUmQzYSJj1Xhm6VGx2vAto+RmqFH2fUdgKf6U7loY36mnpxxNF1PEJ90BmgZSGBqWuVSS7vOjw==
 
 "@hono/vite-dev-server@^0.18.0":
   version "0.18.3"
@@ -997,9 +997,9 @@
   integrity sha512-3Hc2KGIkrvJWJqTbvueXzBeZlmvoOxc2jyX00yzr3+sNFquJg0N8hH4SAPLPVrkWIRQICVpVgjrss971awXVnA==
 
 "@petamoriken/float16@^3.8.7":
-  version "3.9.1"
-  resolved "https://registry.yarnpkg.com/@petamoriken/float16/-/float16-3.9.1.tgz#f1239d6721f25c1bf921dde0d7d678efef9c1de2"
-  integrity sha512-j+ejhYwY6PeB+v1kn7lZFACUIG97u90WxMuGosILFsl9d4Ovi0sjk0GlPfoEcx+FzvXZDAfioD+NGnnPamXgMA==
+  version "3.9.2"
+  resolved "https://registry.yarnpkg.com/@petamoriken/float16/-/float16-3.9.2.tgz#217a5d349f3655b8e286be447e0ed1eae063a78f"
+  integrity sha512-VgffxawQde93xKxT3qap3OH+meZf7VaSB5Sqd4Rqc+FP5alWbpOyan/7tRbOAvynjpG3GpdtAuGU/NdhQpmrog==
 
 "@pkgjs/parseargs@^0.11.0":
   version "0.11.0"
@@ -1938,9 +1938,9 @@ doctrine@^3.0.0:
     esutils "^2.0.2"
 
 drizzle-kit@^0.30.0:
-  version "0.30.5"
-  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.30.5.tgz#fce34a8ca9f82da5212f31c266e407c78523166f"
-  integrity sha512-l6dMSE100u7sDaTbLczibrQZjA35jLsHNqIV+jmhNVO3O8jzM6kywMOmV9uOz9ZVSCMPQhAZEFjL/qDPVrqpUA==
+  version "0.30.6"
+  resolved "https://registry.yarnpkg.com/drizzle-kit/-/drizzle-kit-0.30.6.tgz#e6a1bc57cfbf9f10ed467974a923e236c4f68b31"
+  integrity sha512-U4wWit0fyZuGuP7iNmRleQyK2V8wCuv57vf5l3MnG4z4fzNTjY/U13M8owyQ5RavqvqxBifWORaR3wIUzlN64g==
   dependencies:
     "@drizzle-team/brocli" "^0.10.2"
     "@esbuild-kit/esm-loader" "^2.5.5"
@@ -2670,9 +2670,9 @@ functions-have-names@^1.2.3:
   integrity sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==
 
 gel@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gel/-/gel-2.0.0.tgz#d3627bcd2c769fe475ed1f28fc433660acc83371"
-  integrity sha512-Oq3Fjay71s00xzDc0BF/mpcLmnA+uRqMEJK8p5K4PaZjUEsxaeo+kR9OHBVAf289/qPd+0OcLOLUN0UhqiUCog==
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gel/-/gel-2.0.1.tgz#587d89db54351c2d436de981d136481e37d06a7a"
+  integrity sha512-gfem3IGvqKqXwEq7XseBogyaRwGsQGuE7Cw/yQsjLGdgiyqX92G1xENPCE0ltunPGcsJIa6XBOTx/PK169mOqw==
   dependencies:
     "@petamoriken/float16" "^3.8.7"
     debug "^4.3.4"
