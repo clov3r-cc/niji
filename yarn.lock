@@ -660,9 +660,9 @@
   integrity sha512-fsn8ucecsAXUoVxrUil0m13kOEq4mkX4/4QozCqmY+HpGfKl74OYSn8JcMA8GnG0ClfdRI4/ZSeG7zhFaVg+wg==
 
 "@hono/oidc-auth@^1.1.0":
-  version "1.4.1"
-  resolved "https://registry.yarnpkg.com/@hono/oidc-auth/-/oidc-auth-1.4.1.tgz#b4eb3ee2e5613d25aa4e34fb8663d857c277a730"
-  integrity sha512-yVQ46tdv8FafVnMFokvK0Wt26KovkgAELNwnw/SPyH3bzZruGcMuid+7pWf62gMOaWUseePVab8UAqKZ/NKB9w==
+  version "1.6.0"
+  resolved "https://registry.yarnpkg.com/@hono/oidc-auth/-/oidc-auth-1.6.0.tgz#75d1b000fa9de27a9114b6d44057cced143ad075"
+  integrity sha512-bK+ypup0K1geC1U8SKDyzeMzONSvfH1IY9wBM/81XLsrKBqLPghsqonh864v0MYNV3TVaE5IADKXqH9T2x2Q/A==
   dependencies:
     oauth4webapi "^2.6.0"
 
@@ -857,33 +857,33 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@libsql/client@^0.14.0":
-  version "0.14.0"
-  resolved "https://registry.npmjs.org/@libsql/client/-/client-0.14.0.tgz"
-  integrity sha512-/9HEKfn6fwXB5aTEEoMeFh4CtG0ZzbncBb1e++OCdVpgKZ/xyMsIVYXm0w7Pv4RUel803vE6LwniB3PqD72R0Q==
+"@libsql/client@^0.15.0":
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/@libsql/client/-/client-0.15.2.tgz#bc1da89112de7d64609467938fb09ff36a3ec14a"
+  integrity sha512-D0No4jqDj5I+buvEyFajBugohzJXCBt9aRHCEXGrJS/9obnAO2z18Os3xgyPsWX0Yw4NQfSYaayRdowqkssmXA==
   dependencies:
-    "@libsql/core" "^0.14.0"
+    "@libsql/core" "^0.15.2"
     "@libsql/hrana-client" "^0.7.0"
     js-base64 "^3.7.5"
-    libsql "^0.4.4"
+    libsql "^0.5.4"
     promise-limit "^2.7.0"
 
-"@libsql/core@^0.14.0":
-  version "0.14.0"
-  resolved "https://registry.npmjs.org/@libsql/core/-/core-0.14.0.tgz"
-  integrity sha512-nhbuXf7GP3PSZgdCY2Ecj8vz187ptHlZQ0VRc751oB2C1W8jQUXKKklvt7t1LJiUTQBVJuadF628eUk+3cRi4Q==
+"@libsql/core@^0.15.2":
+  version "0.15.2"
+  resolved "https://registry.yarnpkg.com/@libsql/core/-/core-0.15.2.tgz#06441428621d872606d4c393083d9ef43f3a7556"
+  integrity sha512-+UIN0OlzWa54MqnHbtaJ3FEJj6k2VrwrjX1sSSxzYlM+dWuadjMwOVp7gHpSYJGKWw0RQWLGge4fbW4TCvIm3A==
   dependencies:
     js-base64 "^3.7.5"
 
-"@libsql/darwin-arm64@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@libsql/darwin-arm64/-/darwin-arm64-0.4.5.tgz"
-  integrity sha512-xLdnn0NrgSk6OMi716FFs/27Hs33jtSd2fkKi/72Ey/qBtPWcB1BMurDQekzi0yAcfQTjGqIz7tpOibyjiEPyQ==
+"@libsql/darwin-arm64@0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@libsql/darwin-arm64/-/darwin-arm64-0.5.4.tgz#b3fdd473f9fce1b3e801aef6f4395353f22f33fe"
+  integrity sha512-4PnRdklaQg27vAZxtQgKl+xBHimCH2KRgKId+h63gkAtz5yFTMmX+Q4Ez804T1BgrZuB5ujIvueEEuust2ceSQ==
 
-"@libsql/darwin-x64@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@libsql/darwin-x64/-/darwin-x64-0.4.5.tgz"
-  integrity sha512-rZsEWj0H7oCqd5Y2pe0RzKmuQXC2OB1RbnFy4CvjeAjT6MP6mFp+Vx9mTCAUuJMhuoSVMsFPUJRpAQznl9E3Tg==
+"@libsql/darwin-x64@0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@libsql/darwin-x64/-/darwin-x64-0.5.4.tgz#faeb8a4f214ea8401a76986ce7cd3e1f82389d4c"
+  integrity sha512-r+Z3UXQWxluXKA5cPj5KciNsmSXVTnq9/tmDczngJrogyXwdbbSShYkzov5M+YBlUCKv2VCbNnfxxoIqQnV9Gg==
 
 "@libsql/hrana-client@^0.7.0":
   version "0.7.0"
@@ -908,30 +908,30 @@
     "@types/ws" "^8.5.4"
     ws "^8.13.0"
 
-"@libsql/linux-arm64-gnu@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@libsql/linux-arm64-gnu/-/linux-arm64-gnu-0.4.5.tgz"
-  integrity sha512-VR09iu6KWGJ6fauCn59u/jJ9OA+/A2yQ0dr2HDN2zkRueLC6D2oGYt4gPfLZPFKf+WJpVMtIhNfd+Ru9MMaFkA==
+"@libsql/linux-arm64-gnu@0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-gnu/-/linux-arm64-gnu-0.5.4.tgz#e45d41c2d2f19b1b4a5499fa608c0644da547a42"
+  integrity sha512-QmGXa3TGM6URe7vCOqdvr4Koay+4h5D6y4gdhnPCvXNYrRHgpq5OwEafP9GFalbO32Y1ppLY4enO2LwY0k63Qw==
 
-"@libsql/linux-arm64-musl@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@libsql/linux-arm64-musl/-/linux-arm64-musl-0.4.5.tgz"
-  integrity sha512-74hvD5ej4rBshhxFGNYU16a3m8B/NjIPvhlZ/flG1Oeydfo6AuUXSSNFi+H5+zi9/uWuzyz5TLVeQcraoUV10A==
+"@libsql/linux-arm64-musl@0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-arm64-musl/-/linux-arm64-musl-0.5.4.tgz#aedc0f81c731725d7d87bbfc23535a4023b71b07"
+  integrity sha512-cx4/7/xUjgNbiRsghRHujSvIqaTNFQC7Oo1gkGXGsh8hBwkdXr1QdOpeitq745sl6OlbInRrW2C7B2juxX3hcQ==
 
-"@libsql/linux-x64-gnu@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@libsql/linux-x64-gnu/-/linux-x64-gnu-0.4.5.tgz"
-  integrity sha512-gb5WObGO3+rbuG8h9font1N02iF+zgYAgY0wNa8BNiZ5A9UolZKFxiqGFS7eHaAYfemHJKKTT+aAt3X2p5TibA==
+"@libsql/linux-x64-gnu@0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-gnu/-/linux-x64-gnu-0.5.4.tgz#eca14b846a34ef7231c03d8f61e51173b2426c49"
+  integrity sha512-oPrE9Zyqd7fElS9uCGW2jn55cautD+gDIflfyF5+W/QYzll5OJ2vyMBZOBgdNopuZHrmHYihbespJn3t0WJDJg==
 
-"@libsql/linux-x64-musl@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@libsql/linux-x64-musl/-/linux-x64-musl-0.4.5.tgz"
-  integrity sha512-JfyE6OVC5X4Nr4cFF77VhB1o+hBRxAqYT9YdeqnWdAQSYc/ASi5HnRALLAQEsGacFPZZ32pixfraQmPE3iJFfw==
+"@libsql/linux-x64-musl@0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@libsql/linux-x64-musl/-/linux-x64-musl-0.5.4.tgz#728138bf158906ce67237d7a69d77cdab0ead90a"
+  integrity sha512-XzyVdVe43MexkAaHzUvsi4tpPhfSDn3UndIYFrIu0lYkkiz4oKjTK7Iq96j2bcOeJv0pBGxiv+8Z9I6yp/aI2A==
 
-"@libsql/win32-x64-msvc@0.4.5":
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/@libsql/win32-x64-msvc/-/win32-x64-msvc-0.4.5.tgz"
-  integrity sha512-57GGurNJhOhq3XIopLdGnCoQ4kQAcmbmzzFoC4tpvDE/KSbwZ/13zqJWhQA41nMGk/PKM1XKfKmbIybKx1+eqA==
+"@libsql/win32-x64-msvc@0.5.4":
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/@libsql/win32-x64-msvc/-/win32-x64-msvc-0.5.4.tgz#821387dd792b1b774ff989b1a986c39a97b9f0c2"
+  integrity sha512-xWQyAQEsX+odBrMSXTpm3WOFeoJIX7QncCkaZcsaqdEFueOdNDIdcKAQKMoNlwtj1rCxE72RK4byw/Bflf6Jgg==
 
 "@napi-rs/wasm-runtime@^0.2.7":
   version "0.2.7"
@@ -1953,10 +1953,10 @@ drizzle-kit@^0.30.0:
     esbuild-register "^3.5.0"
     gel "^2.0.0"
 
-drizzle-orm@^0.39.0:
-  version "0.39.3"
-  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-0.39.3.tgz#4f844d5849a0236082340e47e2dc9eecc1e0e64c"
-  integrity sha512-EZ8ZpYvDIvKU9C56JYLOmUskazhad+uXZCTCRN4OnRMsL+xAJ05dv1eCpAG5xzhsm1hqiuC5kAZUCS924u2DTw==
+drizzle-orm@^0.41.0:
+  version "0.41.0"
+  resolved "https://registry.yarnpkg.com/drizzle-orm/-/drizzle-orm-0.41.0.tgz#61b55ef3bf5983222deaaeed848b8c58c4aa3e0a"
+  integrity sha512-7A4ZxhHk9gdlXmTdPj/lREtP+3u8KvZ4yEN6MYVxBzZGex5Wtdc+CWSbu7btgF6TB0N+MNPrvW7RKBbxJchs/Q==
 
 dunder-proto@^1.0.0, dunder-proto@^1.0.1:
   version "1.0.1"
@@ -3257,21 +3257,21 @@ levn@^0.4.1:
     prelude-ls "^1.2.1"
     type-check "~0.4.0"
 
-libsql@^0.4.4:
-  version "0.4.5"
-  resolved "https://registry.npmjs.org/libsql/-/libsql-0.4.5.tgz"
-  integrity sha512-sorTJV6PNt94Wap27Sai5gtVLIea4Otb2LUiAUyr3p6BPOScGMKGt5F1b5X/XgkNtcsDKeX5qfeBDj+PdShclQ==
+libsql@^0.5.4:
+  version "0.5.4"
+  resolved "https://registry.yarnpkg.com/libsql/-/libsql-0.5.4.tgz#a419277a3c591c4fd6d8891916d1ef7c5c986e6b"
+  integrity sha512-GEFeWca4SDAQFxjHWJBE6GK52LEtSskiujbG3rqmmeTO9t4sfSBKIURNLLpKDDF7fb7jmTuuRkDAn9BZGITQNw==
   dependencies:
     "@neon-rs/load" "^0.0.4"
     detect-libc "2.0.2"
   optionalDependencies:
-    "@libsql/darwin-arm64" "0.4.5"
-    "@libsql/darwin-x64" "0.4.5"
-    "@libsql/linux-arm64-gnu" "0.4.5"
-    "@libsql/linux-arm64-musl" "0.4.5"
-    "@libsql/linux-x64-gnu" "0.4.5"
-    "@libsql/linux-x64-musl" "0.4.5"
-    "@libsql/win32-x64-msvc" "0.4.5"
+    "@libsql/darwin-arm64" "0.5.4"
+    "@libsql/darwin-x64" "0.5.4"
+    "@libsql/linux-arm64-gnu" "0.5.4"
+    "@libsql/linux-arm64-musl" "0.5.4"
+    "@libsql/linux-x64-gnu" "0.5.4"
+    "@libsql/linux-x64-musl" "0.5.4"
+    "@libsql/win32-x64-msvc" "0.5.4"
 
 lines-and-columns@^1.1.6:
   version "1.2.4"
@@ -3832,11 +3832,11 @@ queue-microtask@^1.2.2:
   integrity sha512-NuaNSa6flKT5JaSYQzJok04JzTL1CA6aGhv5rfLW3PgqA+M2ChpZQnAC8h8i4ZFkBS8X5RqkDBHA7r4hej3K9A==
 
 react-dom@^19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.0.0.tgz#43446f1f01c65a4cd7f7588083e686a6726cfb57"
-  integrity sha512-4GV5sHFG0e/0AD4X+ySy6UJd3jVl1iNsNHdpad0qhABJ11twS3TTBnseqsKurKcsNqCEFeGL3uLpVChpIO3QfQ==
+  version "19.1.0"
+  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-19.1.0.tgz#133558deca37fa1d682708df8904b25186793623"
+  integrity sha512-Xs1hdnE+DyKgeHJeJznQmYMIBG3TKIHJJT95Q58nHLSrElKlGQqDTR2HQ9fx5CN/Gk6Vh/kupBTDLU11/nDk/g==
   dependencies:
-    scheduler "^0.25.0"
+    scheduler "^0.26.0"
 
 react-is@^16.13.1:
   version "16.13.1"
@@ -3844,16 +3844,16 @@ react-is@^16.13.1:
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-router-dom@^7.0.0:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.1.5.tgz#6b706a5503c01d99c1af69336a7de2e21cadd339"
-  integrity sha512-/4f9+up0Qv92D3bB8iN5P1s3oHAepSGa9h5k6tpTFlixTTskJZwKGhJ6vRJ277tLD1zuaZTt95hyGWV1Z37csQ==
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.5.0.tgz#03201901e7114681d828dd67885b5034af477174"
+  integrity sha512-fFhGFCULy4vIseTtH5PNcY/VvDJK5gvOWcwJVHQp8JQcWVr85ENhJ3UpuF/zP1tQOIFYNRJHzXtyhU1Bdgw0RA==
   dependencies:
-    react-router "7.1.5"
+    react-router "7.5.0"
 
-react-router@7.1.5:
-  version "7.1.5"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.1.5.tgz#c9e19d329d9ce2215fdae844ab6b023b911094db"
-  integrity sha512-8BUF+hZEU4/z/JD201yK6S+UYhsf58bzYIDq2NS1iGpwxSXDu7F+DeGSkIXMFBuHZB21FSiCzEcUb18cQNdRkA==
+react-router@7.5.0:
+  version "7.5.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.5.0.tgz#649568e7e3b4133dee1dcf333d8a3a37b1967f58"
+  integrity sha512-estOHrRlDMKdlQa6Mj32gIks4J+AxNsYoE0DbTTxiMy2mPzZuWSDU+N85/r1IlNR7kGfznF3VCUlvc5IUO+B9g==
   dependencies:
     "@types/cookie" "^0.6.0"
     cookie "^1.0.1"
@@ -3861,9 +3861,9 @@ react-router@7.1.5:
     turbo-stream "2.4.0"
 
 react@^19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/react/-/react-19.0.0.tgz#6e1969251b9f108870aa4bff37a0ce9ddfaaabdd"
-  integrity sha512-V8AVnmPIICiWpGfm6GLzCR/W5FXLchHop40W4nXBmdlEceh16rCN8O8LNWm5bh5XUX91fh7KpA+W0TgMKmgTpQ==
+  version "19.1.0"
+  resolved "https://registry.yarnpkg.com/react/-/react-19.1.0.tgz#926864b6c48da7627f004795d6cce50e90793b75"
+  integrity sha512-FS+XFBNvn3GTAWq26joslQgWNoFu08F4kl0J4CgdNKADkdSGXQyTCnKteIAJy96Br6YbpEU1LSzV5dYtjMkMDg==
 
 reflect.getprototypeof@^1.0.6, reflect.getprototypeof@^1.0.9:
   version "1.0.10"
@@ -4058,10 +4058,10 @@ safe-regex-test@^1.0.3, safe-regex-test@^1.1.0:
   resolved "https://registry.yarnpkg.com/safer-buffer/-/safer-buffer-2.1.2.tgz#44fa161b0187b9549dd84bb91802f9bd8385cd6a"
   integrity sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==
 
-scheduler@^0.25.0:
-  version "0.25.0"
-  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.25.0.tgz#336cd9768e8cceebf52d3c80e3dcf5de23e7e015"
-  integrity sha512-xFVuu11jh+xcO7JOAGJNOXld8/TcEHK/4CituBUeUb5hqxJLj9YuemAEuvm9gQ/+pgXYfbQuqAkiYu+u7YEsNA==
+scheduler@^0.26.0:
+  version "0.26.0"
+  resolved "https://registry.yarnpkg.com/scheduler/-/scheduler-0.26.0.tgz#4ce8a8c2a2095f13ea11bf9a445be50c555d6337"
+  integrity sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==
 
 semver@^6.3.1:
   version "6.3.1"
