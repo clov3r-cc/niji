@@ -2906,10 +2906,10 @@ hasown@^2.0.0, hasown@^2.0.2:
   dependencies:
     function-bind "^1.1.2"
 
-hono@^4.6.2:
-  version "4.8.12"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.8.12.tgz#9f4729f257f00136881a63cc166b29bd5da38944"
-  integrity sha512-MQSKk1Mg7b74k8l+A025LfysnLtXDKkE4pLaSsYRQC5iy85lgZnuyeQ1Wynair9mmECzoLu+FtJtqNZSoogBDQ==
+hono@^4.9.6:
+  version "4.9.6"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.9.6.tgz#fe1f37ec78f574b9ddcffa1d79d399b3a8a12d31"
+  integrity sha512-doVjXhSFvYZ7y0dNokjwwSahcrAfdz+/BCLvAMa/vHLzjj8+CFyV5xteThGUsKdkaasgN+gF2mUxao+SGLpUeA==
 
 hosted-git-info@^8.0.0:
   version "8.0.2"
