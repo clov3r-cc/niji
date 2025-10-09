@@ -691,9 +691,9 @@
   integrity sha512-AWKQZ/YkHUBSHeL/5Ld8FWgUs6wFf4TxGYxqp9wLZxRdFuHBpXmgOq+CuDoL4vllkZLzovCf5HBJnypiy3EtHA==
 
 "@hono/oidc-auth@^1.1.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@hono/oidc-auth/-/oidc-auth-1.7.0.tgz#782dafbbccfdfc9a88f826e554758e40a19efd01"
-  integrity sha512-lJnGrz1ktYPsLKDgLNwl2bKbRFC3ZJb8GUIpMfY8QQEnmmlDtJX0NA2YnW+SgEROAWO5suY/QBlRjEM+xlLo8A==
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/@hono/oidc-auth/-/oidc-auth-1.7.1.tgz#67032e75518bf3ca9debd78b7399723e2c975ca5"
+  integrity sha512-prlPqD6Y+VmWZyhlphBSn1Rqvz10cGn3maONJFGTjhohYCnhYjjZWyj6AaDL1incFf1wu+1KqL4vFEitiAkOyg==
   dependencies:
     oauth4webapi "^2.6.0"
 
@@ -2923,9 +2923,9 @@ hasown@^2.0.0, hasown@^2.0.2:
     function-bind "^1.1.2"
 
 hono@^4.6.2:
-  version "4.9.9"
-  resolved "https://registry.yarnpkg.com/hono/-/hono-4.9.9.tgz#a32ee02a5a9c4be8e7f4d48e4e181e738a1d65d7"
-  integrity sha512-Hxw4wT6zjJGZJdkJzAx9PyBdf7ZpxaTSA0NfxqjLghwMrLBX8p33hJBzoETRakF3UJu6OdNQBZAlNSkGqKFukw==
+  version "4.9.10"
+  resolved "https://registry.yarnpkg.com/hono/-/hono-4.9.10.tgz#27ac828dd5ddaf3947e1a207dad9f079d3cf1b12"
+  integrity sha512-AlI15ijFyKTXR7eHo7QK7OR4RoKIedZvBuRjO8iy4zrxvlY5oFCdiRG/V/lFJHCNXJ0k72ATgnyzx8Yqa5arug==
 
 hosted-git-info@^8.0.0:
   version "8.0.2"
@@ -3859,16 +3859,16 @@ react-is@^16.13.1:
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-router-dom@^7.0.0:
-  version "7.9.3"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.9.3.tgz#67ab1655f67b9b6108fe20ed3d4881b53dccf87a"
-  integrity sha512-1QSbA0TGGFKTAc/aWjpfW/zoEukYfU4dc1dLkT/vvf54JoGMkW+fNA+3oyo2gWVW1GM7BxjJVHz5GnPJv40rvg==
+  version "7.9.4"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.9.4.tgz#37d35b4b7f730b37434f2b7e95121ef557a6b538"
+  integrity sha512-f30P6bIkmYvnHHa5Gcu65deIXoA2+r3Eb6PJIAddvsT9aGlchMatJ51GgpU470aSqRRbFX22T70yQNUGuW3DfA==
   dependencies:
-    react-router "7.9.3"
+    react-router "7.9.4"
 
-react-router@7.9.3:
-  version "7.9.3"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.9.3.tgz#f2d5ff6181851de3df3acb4e7364fce0dee5fba2"
-  integrity sha512-4o2iWCFIwhI/eYAIL43+cjORXYn/aRQPgtFRRZb3VzoyQ5Uej0Bmqj7437L97N9NJW4wnicSwLOLS+yCXfAPgg==
+react-router@7.9.4:
+  version "7.9.4"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.9.4.tgz#2c4249e5d0a6bb8b8f6bf0ede8f5077e4ff8024f"
+  integrity sha512-SD3G8HKviFHg9xj7dNODUKDFgpG4xqD5nhyd0mYoB5iISepuZAvzSr8ywxgxKJ52yRzf/HWtVHc9AWwoTbljvA==
   dependencies:
     cookie "^1.0.1"
     set-cookie-parser "^2.6.0"
