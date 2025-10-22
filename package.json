@@ -16,7 +16,7 @@
     "@hono/oidc-auth": "^1.1.0",
     "@libsql/client": "^0.15.0",
     "drizzle-orm": "^0.44.0",
-    "hono": "^4.6.2",
+    "hono": "^4.10.2",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-router-dom": "^7.0.0"
