@@ -179,9 +179,9 @@
   integrity sha512-6fdIsSeu65g++k8Y2DKzNKs0BkoU+KKI6GAAVBOLh2vvVWWnCP1OgMdVb5JAdjDrjDT5i0GSQu0bgQ8fPsW6zw==
 
 "@cloudflare/workers-types@^4.20240529.0":
-  version "4.20251126.0"
-  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-4.20251126.0.tgz#47121305ce93bf5e7de64d0d58de71e6a3408925"
-  integrity sha512-DSeI1Q7JYmh5/D/tw5eZCjrKY34v69rwj63hHt60nSQW5QLwWCbj/lLtNz9f2EPa+JCACwpLXHgCXfzJ29x66w==
+  version "4.20251202.0"
+  resolved "https://registry.yarnpkg.com/@cloudflare/workers-types/-/workers-types-4.20251202.0.tgz#ea7b05cc9bd8b48d260268824cd7de534f2688a0"
+  integrity sha512-Q7m1Ivu2fbKalOPm00KLpu6GfRaq4TlrPknqugvZgp/gDH96OYKINO4x7jvCIBvCz/aK9vVoOj8tlbSQBervVA==
 
 "@cspotcode/source-map-support@0.8.1":
   version "0.8.1"
@@ -705,9 +705,9 @@
     oauth4webapi "^2.6.0"
 
 "@hono/vite-build@^1.0.0":
-  version "1.7.0"
-  resolved "https://registry.yarnpkg.com/@hono/vite-build/-/vite-build-1.7.0.tgz#eddcd978ab80d9eaf4d3cca60eea0703d08ddf05"
-  integrity sha512-L73WBed5teC7DHTzXYkho83POYYluD2rTkbT76FJuqpfXPgTW/PsbIa8O0YcCETE3VUoh584fe6vuLAM5ctjww==
+  version "1.8.0"
+  resolved "https://registry.yarnpkg.com/@hono/vite-build/-/vite-build-1.8.0.tgz#47626a85894fc5f0d993828416892de3309e6af9"
+  integrity sha512-T/w0Tuv8VV6FgjNnw2aW6LXtRfc5tOhaO54tKCRv4Zqc1tP3w6JyqTFtzJFFDvmY0xTxHS+Pj+ZPLhzFsdiFzQ==
 
 "@hono/vite-dev-server@^0.23.0":
   version "0.23.0"
@@ -3891,9 +3891,9 @@ prelude-ls@^1.2.1:
   integrity sha512-vkcDPrRZo1QZLbn5RLGPpg/WmIQ65qoWWhcGKf/b5eplkkarX0m9z8ppCat4mlOqUsWpyNuYgO3VRyrYHSzX5g==
 
 prettier@^3.3.3:
-  version "3.6.2"
-  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.6.2.tgz#ccda02a1003ebbb2bfda6f83a074978f608b9393"
-  integrity sha512-I7AIg5boAr5R0FFtJ6rCfD+LFsWHp81dolrFD8S79U9tb8Az2nGrJncnMSnys+bpQJfRUzqs9hnA81OAA3hCuQ==
+  version "3.7.4"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-3.7.4.tgz#d2f8335d4b1cec47e1c8098645411b0c9dff9c0f"
+  integrity sha512-v6UNi1+3hSlVvv8fSaoUbggEM5VErKmmpGA7Pl3HF8V6uKY7rvClBOJlH6yNwQtfTueNkGVpOv/mtWL9L4bgRA==
 
 proc-log@^5.0.0:
   version "5.0.0"
