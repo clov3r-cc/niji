@@ -1068,21 +1068,21 @@
     "@jridgewell/resolve-uri" "^3.1.0"
     "@jridgewell/sourcemap-codec" "^1.4.14"
 
-"@libsql/client@^0.15.0":
-  version "0.15.15"
-  resolved "https://registry.yarnpkg.com/@libsql/client/-/client-0.15.15.tgz#70196a0109f8cec41a32e42d9085386900e1943b"
-  integrity sha512-twC0hQxPNHPKfeOv3sNT6u2pturQjLcI+CnpTM0SjRpocEGgfiZ7DWKXLNnsothjyJmDqEsBQJ5ztq9Wlu470w==
+"@libsql/client@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@libsql/client/-/client-0.17.0.tgz#32f3a28beb9a6e41462c9fbd231fcfc6ce3978d0"
+  integrity sha512-TLjSU9Otdpq0SpKHl1tD1Nc9MKhrsZbCFGot3EbCxRa8m1E5R1mMwoOjKMMM31IyF7fr+hPNHLpYfwbMKNusmg==
   dependencies:
-    "@libsql/core" "^0.15.14"
-    "@libsql/hrana-client" "^0.7.0"
+    "@libsql/core" "^0.17.0"
+    "@libsql/hrana-client" "^0.9.0"
     js-base64 "^3.7.5"
     libsql "^0.5.22"
     promise-limit "^2.7.0"
 
-"@libsql/core@^0.15.14":
-  version "0.15.15"
-  resolved "https://registry.yarnpkg.com/@libsql/core/-/core-0.15.15.tgz#0c5c0e4825a859b6a688d9ecc1086f9b9e46c621"
-  integrity sha512-C88Z6UKl+OyuKKPwz224riz02ih/zHYI3Ho/LAcVOgjsunIRZoBw7fjRfaH9oPMmSNeQfhGklSG2il1URoOIsA==
+"@libsql/core@^0.17.0":
+  version "0.17.0"
+  resolved "https://registry.yarnpkg.com/@libsql/core/-/core-0.17.0.tgz#dfbdb3312576ad19bd3c89fca3b6885862becacf"
+  integrity sha512-hnZRnJHiS+nrhHKLGYPoJbc78FE903MSDrFJTbftxo+e52X+E0Y0fHOCVYsKWcg6XgB7BbJYUrz/xEkVTSaipw==
   dependencies:
     js-base64 "^3.7.5"
 
@@ -1096,20 +1096,15 @@
   resolved "https://registry.yarnpkg.com/@libsql/darwin-x64/-/darwin-x64-0.5.22.tgz#4967188bfa15a974d9a1c987c3129565f07a1781"
   integrity sha512-ny2HYWt6lFSIdNFzUFIJ04uiW6finXfMNJ7wypkAD8Pqdm6nAByO+Fdqu8t7sD0sqJGeUCiOg480icjyQ2/8VA==
 
-"@libsql/hrana-client@^0.7.0":
-  version "0.7.0"
-  resolved "https://registry.yarnpkg.com/@libsql/hrana-client/-/hrana-client-0.7.0.tgz#c059d8106b9d40dd931217333710aff2ceb5216e"
-  integrity sha512-OF8fFQSkbL7vJY9rfuegK1R7sPgQ6kFMkDamiEccNUvieQ+3urzfDFI616oPl8V7T9zRmnTkSjMOImYCAVRVuw==
+"@libsql/hrana-client@^0.9.0":
+  version "0.9.0"
+  resolved "https://registry.yarnpkg.com/@libsql/hrana-client/-/hrana-client-0.9.0.tgz#908744d68712f4d4f5072a31a1bc61f4bee10f5f"
+  integrity sha512-pxQ1986AuWfPX4oXzBvLwBnfgKDE5OMhAdR/5cZmRaB4Ygz5MecQybvwZupnRz341r2CtFmbk/BhSu7k2Lm+Jw==
   dependencies:
-    "@libsql/isomorphic-fetch" "^0.3.1"
     "@libsql/isomorphic-ws" "^0.1.5"
+    cross-fetch "^4.0.0"
     js-base64 "^3.7.5"
     node-fetch "^3.3.2"
-
-"@libsql/isomorphic-fetch@^0.3.1":
-  version "0.3.1"
-  resolved "https://registry.yarnpkg.com/@libsql/isomorphic-fetch/-/isomorphic-fetch-0.3.1.tgz#42023816d5645a5a3f3a78bb3899bdc5814c7b88"
-  integrity sha512-6kK3SUK5Uu56zPq/Las620n5aS9xJq+jMBcNSOmjhNf/MUvdyji4vrMTqD7ptY7/4/CAVEAYDeotUz60LNQHtw==
 
 "@libsql/isomorphic-ws@^0.1.5":
   version "0.1.5"
@@ -2186,6 +2181,13 @@ cookie@^1.0.1, cookie@^1.0.2:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/cookie/-/cookie-1.1.1.tgz#3bb9bdfc82369db9c2f69c93c9c3ceb310c88b3c"
   integrity sha512-ei8Aos7ja0weRpFzJnEA9UHJ/7XQmqglbRwnf2ATjcB9Wq874VKH9kfjjirM6UhU2/E5fFYadylyhFldcqSidQ==
+
+cross-fetch@^4.0.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/cross-fetch/-/cross-fetch-4.1.0.tgz#8f69355007ee182e47fa692ecbaa37a52e43c3d2"
+  integrity sha512-uKm5PU+MHTootlWEY+mZ4vvXoCn4fLQxT9dSc1sXVMSFkINTJVN8cAQROpwcKm8bJ/c7rgZVIBWzH5T78sNZZw==
+  dependencies:
+    node-fetch "^2.7.0"
 
 cross-spawn@^7.0.6:
   version "7.0.6"
@@ -3842,6 +3844,13 @@ node-domexception@^1.0.0:
   resolved "https://registry.yarnpkg.com/node-domexception/-/node-domexception-1.0.0.tgz#6888db46a1f71c0b76b3f7555016b63fe64766e5"
   integrity sha512-/jKZoMpw0F8GRwl4/eLROPA3cfcXtLApP0QzLmUT/HuPCZWyB7IY9ZrMeKw2O/nFIqPQB3PVM9aYm0F312AXDQ==
 
+node-fetch@^2.7.0:
+  version "2.7.0"
+  resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-2.7.0.tgz#d0f0fa6e3e2dc1d27efcd8ad99d550bda94d187d"
+  integrity sha512-c4FRfUm/dbcWZ7U+1Wq0AwCyFL+3nt2bEw05wfxSz+DWpWsitgmSgYmy2dQdWyKC1694ELPqMs/YzUSNozLt8A==
+  dependencies:
+    whatwg-url "^5.0.0"
+
 node-fetch@^3.3.2:
   version "3.3.2"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-3.3.2.tgz#d1e889bacdf733b4ff3b2b243eb7a12866a0b78b"
@@ -4129,16 +4138,16 @@ react-is@^16.13.1:
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
 react-router-dom@^7.0.0:
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.11.0.tgz#2165f63e52798bd0eb138480c098ad058cdf3413"
-  integrity sha512-e49Ir/kMGRzFOOrYQBdoitq3ULigw4lKbAyKusnvtDu2t4dBX4AGYPrzNvorXmVuOyeakai6FUPW5MmibvVG8g==
+  version "7.12.0"
+  resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-7.12.0.tgz#0f2a059c6b2c4ae04474fe4171c59fb48b9fb8cf"
+  integrity sha512-pfO9fiBcpEfX4Tx+iTYKDtPbrSLLCbwJ5EqP+SPYQu1VYCXdy79GSj0wttR0U4cikVdlImZuEZ/9ZNCgoaxwBA==
   dependencies:
-    react-router "7.11.0"
+    react-router "7.12.0"
 
-react-router@7.11.0:
-  version "7.11.0"
-  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.11.0.tgz#d3b91567fdbe910caf9064ea69b7b4d9264f2945"
-  integrity sha512-uI4JkMmjbWCZc01WVP2cH7ZfSzH91JAZUDd7/nIprDgWxBV1TkkmLToFh7EbMTcMak8URFRa2YoBL/W8GWnCTQ==
+react-router@7.12.0:
+  version "7.12.0"
+  resolved "https://registry.yarnpkg.com/react-router/-/react-router-7.12.0.tgz#459a86862abbedd02e76e686751fe71f9fd73a4f"
+  integrity sha512-kTPDYPFzDVGIIGNLS5VJykK0HfHLY5MF3b+xj0/tTyNYL1gF1qs7u67Z9jEhQk2sQ98SUaHxlG31g1JtF7IfVw==
   dependencies:
     cookie "^1.0.1"
     set-cookie-parser "^2.6.0"
@@ -4679,6 +4688,11 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
+tr46@~0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/tr46/-/tr46-0.0.3.tgz#8184fd347dac9cdc185992f3a6622e14b9d9ab6a"
+  integrity sha512-N3WMsuqV66lT30CrXNbEjx4GEwlow3v6rr4mCcv6prnfwhS01rkgyFdjPNBYd9br7LpXV1+Emh01fHnq2Gdgrw==
+
 ts-api-utils@^2.1.0, ts-api-utils@^2.4.0:
   version "2.4.0"
   resolved "https://registry.yarnpkg.com/ts-api-utils/-/ts-api-utils-2.4.0.tgz#2690579f96d2790253bdcf1ca35d569ad78f9ad8"
@@ -4899,6 +4913,19 @@ web-streams-polyfill@^3.0.3:
   version "3.3.3"
   resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.3.3.tgz#2073b91a2fdb1fbfbd401e7de0ac9f8214cecb4b"
   integrity sha512-d2JWLCivmZYTSIoge9MsgFCZrt571BikcWGYkjC1khllbTeDlGqZ2D8vD8E/lJa8WGWbb7Plm8/XJYV7IJHZZw==
+
+webidl-conversions@^3.0.0:
+  version "3.0.1"
+  resolved "https://registry.yarnpkg.com/webidl-conversions/-/webidl-conversions-3.0.1.tgz#24534275e2a7bc6be7bc86611cc16ae0a5654871"
+  integrity sha512-2JAn3z8AR6rjK8Sm8orRC0h/bcl/DqL7tRPdGZ4I1CjdF+EaMLmYxBHyXuKL849eucPFhvBoxMsflfOb8kxaeQ==
+
+whatwg-url@^5.0.0:
+  version "5.0.0"
+  resolved "https://registry.yarnpkg.com/whatwg-url/-/whatwg-url-5.0.0.tgz#966454e8765462e37644d3626f6742ce8b70965d"
+  integrity sha512-saE57nupxk6v3HY35+jzBwYa0rKSy0XR8JSxZPwgLr7ys0IBzhGviA1/TUGJLmSVqs8pb9AnvICXEuOHLprYTw==
+  dependencies:
+    tr46 "~0.0.3"
+    webidl-conversions "^3.0.0"
 
 which-boxed-primitive@^1.1.0, which-boxed-primitive@^1.1.1:
   version "1.1.1"
