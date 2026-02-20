@@ -838,9 +838,9 @@
   integrity sha512-vHL6w3ecZsky+8P5MD+eFfaGTyCeOHUIFYMGpQGbrBTSmNNoxv0if69rEZ5giu36weC5saFuznL411gRX7bJDw==
 
 "@hono/oidc-auth@^1.1.0":
-  version "1.8.0"
-  resolved "https://registry.yarnpkg.com/@hono/oidc-auth/-/oidc-auth-1.8.0.tgz#9c4fbabe6ed147e529a51928b1c89e3b79c6dbfb"
-  integrity sha512-SYCSdmgNhGqUuBQvIgPvqXYKR/TTSSpe+nEgxkftN3qGlrFofjTPVqsUsprKFHVJAt4eLQRhqmVrx71mQCAKig==
+  version "1.8.1"
+  resolved "https://registry.yarnpkg.com/@hono/oidc-auth/-/oidc-auth-1.8.1.tgz#a9da9e8e7098186ca2ebbe260b3dc76b1375f810"
+  integrity sha512-EK95ilPVeX4O+oWIOe/DyhdodA7ckUiH9uP0mMpLLXnpv1b364QRX01EJFNl4QRn5kjcl2OZ+jgb6vde5kBV6A==
   dependencies:
     oauth4webapi "^2.6.0"
 
