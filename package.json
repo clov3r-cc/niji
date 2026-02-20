@@ -24,7 +24,7 @@
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240529.0",
     "@eslint/compat": "^2.0.0",
-    "@eslint/js": "^9.11.0",
+    "@eslint/js": "^10.0.0",
     "@hono/vite-build": "^1.0.0",
     "@hono/vite-dev-server": "^0.25.0",
     "@stylistic/eslint-plugin": "^5.0.0",
@@ -35,7 +35,7 @@
     "@types/react-dom": "~19.2.0",
     "@typescript-eslint/parser": "^8.6.0",
     "drizzle-kit": "^0.31.0",
-    "eslint": "^9.11.0",
+    "eslint": "^10.0.0",
     "eslint-config-prettier": "^10.0.0",
     "eslint-import-resolver-typescript": "^4.0.0",
     "eslint-plugin-import-x": "^4.3.0",
